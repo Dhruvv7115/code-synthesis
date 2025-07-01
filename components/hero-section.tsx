@@ -78,7 +78,7 @@ export default function HeroSection({ isDarkMode, cardClasses }: HeroSectionProp
             <span className="bg-gradient-to-r font-[Tropical] from-green-400 via-emerald-400 to-lime-400 bg-clip-text text-transparent">
               CODE SYNTHESIS
             </span>
-            <span className="block md:inline  md:ml-6">2025</span>
+            <span className="block md:inline md:ml-6 bg-gradient-to-r text-transparent bg-clip-text from-green-400 via-emerald-400 to-lime-400">2025</span>
           </motion.h1>
           <motion.div className="flex items-center justify-center space-x-4 mb-8" variants={itemVariants}>
             <div className="h-px bg-gradient-to-r from-transparent via-green-400 to-transparent flex-1 max-w-20"></div>

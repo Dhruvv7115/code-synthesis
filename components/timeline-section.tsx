@@ -23,6 +23,7 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
       description: "Team registration and project submission portal goes live",
       icon: <Users className="w-5 h-5" />,
       color: "from-blue-400 to-cyan-500",
+      last: false,
     },
     {
       date: "September 26, 2025",
@@ -31,6 +32,7 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
       description: "Last chance to register your team and secure your spot",
       icon: <Clock className="w-5 h-5" />,
       color: "from-orange-400 to-red-500",
+      last: false,
     },
     {
       date: "September 27, 2025",
@@ -39,6 +41,7 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
       description: "Welcome address, rules briefing, and team introductions",
       icon: <Zap className="w-5 h-5" />,
       color: "from-green-400 to-emerald-500",
+      last: false,
     },
     {
       date: "September 27, 2025",
@@ -47,6 +50,7 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
       description: "48 hours of intense coding, innovation, and collaboration starts",
       icon: <Trophy className="w-5 h-5" />,
       color: "from-purple-400 to-pink-500",
+      last: false,
     },
     {
       date: "September 27, 2025",
@@ -55,6 +59,7 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
       description: "Fuel up and connect with fellow participants and mentors",
       icon: <Coffee className="w-5 h-5" />,
       color: "from-yellow-400 to-orange-500",
+      last: false,
     },
     {
       date: "September 27, 2025",
@@ -63,6 +68,7 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
       description: "One-on-one guidance from industry experts and tech leaders",
       icon: <Users className="w-5 h-5" />,
       color: "from-teal-400 to-green-500",
+      last: false,
     },
     {
       date: "September 28, 2025",
@@ -71,6 +77,7 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
       description: "Late night fuel to keep the coding momentum going strong",
       icon: <Coffee className="w-5 h-5" />,
       color: "from-indigo-400 to-purple-500",
+      last: false,
     },
     {
       date: "September 28, 2025",
@@ -79,6 +86,7 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
       description: "Morning refreshments and progress check with teams",
       icon: <Coffee className="w-5 h-5" />,
       color: "from-lime-400 to-green-500",
+      last: false,
     },
     {
       date: "September 28, 2025",
@@ -87,6 +95,7 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
       description: "Final submission deadline for all hackathon projects",
       icon: <Clock className="w-5 h-5" />,
       color: "from-red-400 to-pink-500",
+      last: false,
     },
     {
       date: "September 29, 2025",
@@ -95,6 +104,7 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
       description: "Teams present their solutions to judges and audience",
       icon: <Award className="w-5 h-5" />,
       color: "from-cyan-400 to-blue-500",
+      last: false,
     },
     {
       date: "September 29, 2025",
@@ -103,6 +113,7 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
       description: "Expert panel evaluates projects and selects winners",
       icon: <Trophy className="w-5 h-5" />,
       color: "from-emerald-400 to-teal-500",
+      last: false,
     },
     {
       date: "September 29, 2025",
@@ -111,6 +122,7 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
       description: "Winner announcements, prize distribution, and celebration",
       icon: <Award className="w-5 h-5" />,
       color: "from-yellow-400 to-orange-500",
+      last: false,
     },
   ]
 
@@ -160,7 +172,7 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
 
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-green-400 via-emerald-500 to-green-400"></div>
+          <div className="absolute left-8 top-0 bottom-14 w-0.5 bg-gradient-to-b from-green-400 via-emerald-500 to-green-400"></div>
 
           <div className="space-y-8">
             {timelineEvents.map((event, index) => (

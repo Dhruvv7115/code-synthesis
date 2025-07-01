@@ -43,9 +43,9 @@ export default function Navigation({ isDarkMode, scrollToSection }: NavigationPr
         isScrolled ? " backdrop-blur-md border-b " : "bg-transparent"
       }`}
     >
-      <div className="flex items-center justify-center px-6 py-4 max-w-7xl mx-auto relative">
+      <div className="flex items-center justify-center p-6 max-w-7xl mx-auto relative">
         {/* Desktop Navigation - Centered */}
-        <div className="hidden lg:flex items-center space-x-8">
+        <div className="hidden lg:flex items-center space-x-8 ">
           {navItems.map((item, index) => (
             <motion.button
               key={item.id}
@@ -55,14 +55,14 @@ export default function Navigation({ isDarkMode, scrollToSection }: NavigationPr
               onClick={() => scrollToSection(item.id)}
               className={`${
                 isScrolled
-                  ? "text-white hover:text-green-300"
+                  ? "hover:text-green-300"
                   : isDarkMode
-                    ? "text-gray-300 hover:text-green-400"
-                    : "text-gray-700 hover:text-green-600"
-              } transition-all duration-300 font-[Tropical] font-normal tracking-wide text-base relative group`}
+                    ? "hover:text-green-400"
+                    : "hover:text-green-600"
+              } ${isDarkMode ? "text-white" : "text-black"} transition-all duration-300 font-[Tropical] font-normal tracking-wider text-base relative group`}
             >
               {item.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-full h-0.5 scale-x-0 bg-green-400 group-hover:scale-x-100 transition-all duration-300"></span>
             </motion.button>
           ))}
         </div>
