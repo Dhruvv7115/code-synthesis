@@ -76,7 +76,7 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
           <span className="bg-gradient-to-r from-green-400 via-emerald-400 to-lime-400 bg-clip-text text-transparent">
             CODE SYNTHESIS
           </span>
-          <span className="block md:inline md:ml-6 text-white">2025</span>
+          <span className="block md:inline md:ml-6 bg-gradient-to-r from-green-400 via-emerald-400 to-lime-400 bg-clip-text text-transparent">2025</span>
         </motion.h1>
 
         {/* Subtitle */}

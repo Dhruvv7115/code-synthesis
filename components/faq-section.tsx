@@ -45,7 +45,7 @@ export default function FAQSection({ isDarkMode, cardClasses, accentColor }: FAQ
   ]
 
   return (
-    <section className={`relative py-24 px-6 md:px-12 ${isDarkMode ? "bg-gray-900/20" : "bg-gray-50/50"}`}>
+    <section id="faq" className={`relative py-24 px-6 md:px-12 ${isDarkMode ? "bg-gray-900/20" : "bg-gray-50/50"}`}>
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tight">
@@ -72,7 +72,7 @@ export default function FAQSection({ isDarkMode, cardClasses, accentColor }: FAQ
                 <div
                   className={`w-8 h-8 bg-green-400/20 rounded-full flex items-center justify-center transition-transform ${openFaq === index ? "rotate-180" : ""}`}
                 >
-                  <div className="w-4 h-4 border-2 border-green-400 border-t-0 border-l-0 rotate-45 transition-transform"></div>
+                  <div className="w-2 h-2 border-2 border-green-400 border-t-0 border-l-0 rotate-45 transition-transform"></div>
                 </div>
               </button>
               {openFaq === index && (
