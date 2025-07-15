@@ -1,19 +1,31 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
-import { Calendar, Clock, Trophy, Users, Zap, Coffee, Award } from "lucide-react"
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import {
+  Calendar,
+  Clock,
+  Trophy,
+  Users,
+  Zap,
+  Coffee,
+  Award,
+} from "lucide-react";
 
 interface TimelineSectionProps {
-  isDarkMode: boolean
-  cardClasses: string
-  accentColor: string
+  isDarkMode: boolean;
+  cardClasses: string;
+  accentColor: string;
 }
 
-export default function TimelineSection({ isDarkMode, cardClasses, accentColor }: TimelineSectionProps) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+export default function TimelineSection({
+  isDarkMode,
+  cardClasses,
+  accentColor,
+}: TimelineSectionProps) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const timelineEvents = [
     {
@@ -43,11 +55,13 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
       color: "from-green-400 to-emerald-500",
       last: false,
     },
+
     {
       date: "September 27, 2025",
       time: "10:00 AM",
       title: "Hacking Begins",
-      description: "48 hours of intense coding, innovation, and collaboration starts",
+      description:
+        "48 hours of intense coding, innovation, and collaboration starts",
       icon: <Trophy className="w-5 h-5" />,
       color: "from-purple-400 to-pink-500",
       last: false,
@@ -124,7 +138,7 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
       color: "from-yellow-400 to-orange-500",
       last: false,
     },
-  ]
+  ];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -134,7 +148,7 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { x: -50, opacity: 0 },
@@ -146,9 +160,32 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
         ease: "easeOut",
       },
     },
-  }
+  };
 
-  return (
+  return true ? (
+    <>
+      <section
+        id="timeline"
+        className="relative py-24 px-6 md:px-12 flex flex-col items-center justify-center min-h-[200px]"
+      >
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tight">
+            EVENT <span className={accentColor}>TIMELINE</span>
+          </h2>
+          <div className="h-1 w-32 bg-gradient-to-r from-green-400 to-emerald-500 mx-auto mb-10"></div>
+          <p
+            className={`${
+              isDarkMode ? "text-gray-300" : "text-gray-700"
+            } text-xl md:text-2xl font-semibold`}
+          >
+            <div className="text-2xl md:text-3xl font-bold text-gray-400 animate-pulse">
+              To be revealed soon!
+            </div>
+          </p>
+        </div>
+      </section>
+    </>
+  ) : (
     <section id="timeline" className="relative py-24 px-6 md:px-12" ref={ref}>
       <motion.div
         variants={containerVariants}
@@ -166,7 +203,8 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
               isDarkMode ? "text-gray-300" : "text-gray-700"
             } text-lg md:text-xl max-w-3xl mx-auto leading-relaxed`}
           >
-            Your complete guide to the 48-hour journey of innovation, collaboration, and competition.
+            Your complete guide to the 48-hour journey of innovation,
+            collaboration, and competition.
           </p>
         </motion.div>
 
@@ -185,7 +223,9 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
                 {/* Timeline Dot */}
                 <div className="relative z-10">
                   <div
-                    className={`w-16 h-16 bg-gradient-to-r ${event.color} rounded-full flex items-center justify-center shadow-lg border-4 ${
+                    className={`w-16 h-16 bg-gradient-to-r ${
+                      event.color
+                    } rounded-full flex items-center justify-center shadow-lg border-4 ${
                       isDarkMode ? "border-black" : "border-white"
                     }`}
                   >
@@ -202,10 +242,14 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
 
                     <div className="relative z-10">
                       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
-                        <h3 className="text-lg font-black mb-2 sm:mb-0">{event.title}</h3>
+                        <h3 className="text-lg font-black mb-2 sm:mb-0">
+                          {event.title}
+                        </h3>
                         <div className="flex items-center space-x-4 text-sm">
                           <div
-                            className={`flex items-center space-x-1 ${isDarkMode ? "text-gray-400" : "text-gray-600"}`}
+                            className={`flex items-center space-x-1 ${
+                              isDarkMode ? "text-gray-400" : "text-gray-600"
+                            }`}
                           >
                             <Calendar className="w-4 h-4" />
                             <span>{event.date}</span>
@@ -216,7 +260,11 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
                           </div>
                         </div>
                       </div>
-                      <p className={`${isDarkMode ? "text-gray-300" : "text-gray-700"} text-sm leading-relaxed`}>
+                      <p
+                        className={`${
+                          isDarkMode ? "text-gray-300" : "text-gray-700"
+                        } text-sm leading-relaxed`}
+                      >
                         {event.description}
                       </p>
                     </div>
@@ -228,5 +276,5 @@ export default function TimelineSection({ isDarkMode, cardClasses, accentColor }
         </div>
       </motion.div>
     </section>
-  )
+  );
 }
