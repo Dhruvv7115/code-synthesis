@@ -153,6 +153,48 @@ export default function TeamSection({
         },
       ],
     },
+
+    {
+      name: "SOCIETY MENTORS",
+      icon: <Users className="w-6 h-6" />,
+      color: "from-violet-400 to-purple-500",
+      bgColor: "from-violet-500/20 to-purple-500/20",
+      members: [
+        {
+          name: "ARPIT RAJPUT",
+          role: "",
+          image: "/team/arpit-rajput.jpg",
+          bio: "",
+          socials: [
+            {
+              platform: "linkedin",
+              url: "",
+            },
+            {
+              platform: "github",
+              url: "",
+            },
+          ],
+        },
+        {
+          name: "ATHARV TRIPATHI",
+          role: "",
+          image: "/team/atharv-tripathi.jpg",
+          bio: "",
+          socials: [
+            {
+              platform: "linkedin",
+              url: "",
+            },
+            {
+              platform: "github",
+              url: "",
+            },
+          ],
+        },
+      ],
+    },
+
     {
       name: "LEAD ORGANISERS",
       icon: <UserCheck className="w-6 h-6" />,
@@ -161,7 +203,7 @@ export default function TeamSection({
       members: [
         {
           name: "KANISHQ VERMA",
-          role: "Co-Organiser",
+          role: "Lead-Organiser",
           image: "/team/kanishq-verma.png",
           bio: "Supporting organizational activities",
           socials: [
@@ -178,7 +220,7 @@ export default function TeamSection({
         },
         {
           name: "ASHISH KUMAR",
-          role: "Co-Organiser",
+          role: "Lead-Organise",
           image: "/team/ashish-kumar.jpg",
           bio: "Coordinating with partners and stakeholders",
           socials: [
@@ -211,7 +253,7 @@ export default function TeamSection({
         },
         {
           name: "NAMAN GAMBHIR",
-          role: "PR & Marketing Lead",
+          role: "Co-Organiser",
           image: "/team/naman-image.jpg",
           bio: "Leading marketing campaigns and outreach",
           socials: [
@@ -228,11 +270,67 @@ export default function TeamSection({
       ],
     },
     {
-      name: "THE CATALYSTS",
-      icon: <Users className="w-6 h-6" />,
-      color: "from-purple-400 to-pink-500",
-      bgColor: "from-purple-500/20 to-pink-500/20",
+      name: "CHIEF MARKETING OFFICER",
+      icon: <Video className="w-6 h-6" />,
+      color: "from-violet-400 to-purple-500",
+      bgColor: "from-violet-500/20 to-purple-500/20",
       members: [
+        {
+          name: "KASHVI ARORA",
+          role: "",
+          image: "/team/Kashvi.jpg",
+          bio: "",
+          socials: [
+            {
+              platform: "linkedin",
+              url: "",
+            },
+            {
+              platform: "github",
+              url: "",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "CORE TEAM",
+      icon: <Video className="w-6 h-6" />,
+      color: "from-violet-400 to-purple-500",
+      bgColor: "from-violet-500/20 to-purple-500/20",
+      members: [
+        {
+          name: "JEEVIDHA ARORA",
+          role: "Operations Head",
+          image: "/team/Jeevidha-Arora.jpg",
+          bio: "",
+          socials: [
+            {
+              platform: "linkedin",
+              url: "",
+            },
+            {
+              platform: "github",
+              url: "",
+            },
+          ],
+        },
+        {
+          name: "VRITTI GARG",
+          role: "Interim Executive",
+          image: "/team/vritti-garg.jpg",
+          bio: "",
+          socials: [
+            {
+              platform: "linkedin",
+              url: "",
+            },
+            {
+              platform: "github",
+              url: "",
+            },
+          ],
+        },
         {
           name: "AKSHIT SHARMA",
           role: "Core Member",
@@ -269,6 +367,15 @@ export default function TeamSection({
         },
       ],
     },
+    // {
+    //   name: "THE CATALYSTS",
+    //   icon: <Users className="w-6 h-6" />,
+    //   color: "from-purple-400 to-pink-500",
+    //   bgColor: "from-purple-500/20 to-pink-500/20",
+    //   members: [
+
+    //   ],
+    // },
     {
       name: "DESIGN TEAM",
       icon: <Palette className="w-6 h-6" />,
@@ -391,14 +498,14 @@ export default function TeamSection({
       ],
     },
     {
-      name: "SOCIAL MEDIA TEAM",
+      name: "SOCIAL MEDIA MANAGEMENT",
       icon: <Megaphone className="w-6 h-6" />,
       color: "from-pink-400 to-red-500",
       bgColor: "from-pink-500/20 to-red-500/20",
       members: [
         {
           name: "AMAN GOEL",
-          role: "Social Media Lead",
+          role: "Social Media Management Lead",
           image: "/team/aman-goel.jpg",
           bio: "Event planning and execution support",
           socials: [
@@ -411,7 +518,7 @@ export default function TeamSection({
         },
         {
           name: "AYUSHI DUBEY",
-          role: "Social Media Member",
+          role: "Social Media Management",
           image: "placeholder.svg?height=200&width=200",
           bio: "Managing public relations and communications",
           socials: [
@@ -469,7 +576,7 @@ export default function TeamSection({
         },
         {
           name: "MUSTAFA QADEER",
-          role: "Content Member",
+          role: "Content Team",
           image: "placeholder.svg?height=200&width=200",
           bio: "Content creation and storytelling",
           socials: [
@@ -486,7 +593,7 @@ export default function TeamSection({
         },
         {
           name: "DEEPTI GUPTA",
-          role: "Content Member",
+          role: "Content Team",
           image: "/team/deepti-gupta.jpg",
           bio: "Content creation and storytelling",
           socials: [
@@ -528,7 +635,7 @@ export default function TeamSection({
         },
         {
           name: "KASHISH ARORA",
-          role: "Photography Member",
+          role: "Photography Team",
           image: "/team/kashish-arora.jpg",
           bio: "Event photography and documentation",
           socials: [
@@ -544,7 +651,7 @@ export default function TeamSection({
         },
         {
           name: "SHUBHAM RANJAN",
-          role: "Photography Member",
+          role: "Photography Team",
           image: "placeholder.svg?height=200&width=200",
           bio: "Creating and editing video content",
           socials: [
@@ -561,7 +668,7 @@ export default function TeamSection({
         },
         {
           name: "GEET GULATI",
-          role: "Photography Team Lead",
+          role: "Photography Team",
           image: "placeholder.svg?height=200&width=200",
           bio: "Capturing visual stories and moments",
           socials: [
@@ -586,7 +693,7 @@ export default function TeamSection({
       members: [
         {
           name: "KHUSHI VERMA",
-          role: "Marketing Lead",
+          role: "Marketing Team",
           image: "/team/Khushi-verma.jpg",
           bio: "Coordinating project activities and teams",
           socials: [
@@ -603,7 +710,7 @@ export default function TeamSection({
         },
         {
           name: "PRARTHNA PUNPHER",
-          role: "Marketing Member",
+          role: "Marketing Team",
           image: "/team/prarthna-punpher.jpg",
           bio: "Project management and team coordination",
           socials: [
@@ -619,7 +726,7 @@ export default function TeamSection({
         },
         {
           name: "KRISH KAPOOR",
-          role: "Marketing Member",
+          role: "Marketing Team",
           image: "placeholder.svg?height=200&width=200",
           bio: "Project management and team coordination",
           socials: [
@@ -635,7 +742,7 @@ export default function TeamSection({
         },
         {
           name: "AYUSH MEHRA",
-          role: "Marketing Member",
+          role: "Marketing Team",
           image: "placeholder.svg?height=200&width=200",
           bio: "Project management and team coordination",
           socials: [
@@ -671,23 +778,6 @@ export default function TeamSection({
             {
               platform: "instagram",
               url: "",
-            },
-          ],
-        },
-        {
-          name: "HARSH SINGHAL",
-          role: "Social Media Management",
-          image: "/team/Harshsingal.jpg",
-          bio: "Social media content and community management",
-          socials: [
-            {
-              platform: "linkedin",
-              url: "https://www.linkedin.com/in/harsh-singhal-oo7/",
-            },
-            { platform: "github", url: "https://github.com/Harsh0007-max" },
-            {
-              platform: "instagram",
-              url: "https://www.instagram.com/harshsinghal2007",
             },
           ],
         },
@@ -1037,9 +1127,9 @@ export default function TeamSection({
               platform: "linkedin",
               url: "https://www.linkedin.com/in/yana-malhotra-427b61293",
             },
-            { 
-              platform: "github", 
-              url: "https://github.com/yana-malhotra27" 
+            {
+              platform: "github",
+              url: "https://github.com/yana-malhotra27",
             },
           ],
         },
@@ -1053,9 +1143,9 @@ export default function TeamSection({
               platform: "linkedin",
               url: "",
             },
-            { 
-              platform: "github", 
-              url: "" 
+            {
+              platform: "github",
+              url: "",
             },
           ],
         },
@@ -1069,9 +1159,9 @@ export default function TeamSection({
               platform: "linkedin",
               url: "",
             },
-            { 
-              platform: "github", 
-              url: "" 
+            {
+              platform: "github",
+              url: "",
             },
           ],
         },
@@ -1085,9 +1175,9 @@ export default function TeamSection({
               platform: "linkedin",
               url: "",
             },
-            { 
-              platform: "github", 
-              url: "" 
+            {
+              platform: "github",
+              url: "",
             },
           ],
         },
@@ -1117,9 +1207,9 @@ export default function TeamSection({
               platform: "linkedin",
               url: "",
             },
-            { 
-              platform: "github", 
-              url: "" 
+            {
+              platform: "github",
+              url: "",
             },
           ],
         },
@@ -1129,13 +1219,13 @@ export default function TeamSection({
           image: "/team/sanchit.png",
           bio: "Overseeing cybersecurity and infrastructure",
           socials: [
-            { 
-              platform: "linkedin", 
-              url: "https://linkedin.com/in/heysanchit" 
+            {
+              platform: "linkedin",
+              url: "https://linkedin.com/in/heysanchit",
             },
-            { 
-              platform: "github", 
-              url: "https://github.com/0xMistri" 
+            {
+              platform: "github",
+              url: "https://github.com/0xMistri",
             },
           ],
         },
@@ -1149,113 +1239,9 @@ export default function TeamSection({
               platform: "linkedin",
               url: "",
             },
-            { 
-              platform: "github", 
-              url: "" 
-            },
-          ],
-        },
-      ],
-    },
-    {
-      name: "CORE TEAM",
-      icon: <Video className="w-6 h-6" />,
-      color: "from-violet-400 to-purple-500",
-      bgColor: "from-violet-500/20 to-purple-500/20",
-      members: [
-        {
-          name: "JEEVIDHA ARORA",
-          role: "Operations Head",
-          image: "/team/Jeevidha-Arora.jpg",
-          bio: "",
-          socials: [
             {
-              platform: "linkedin",
+              platform: "github",
               url: "",
-            },
-            { 
-              platform: "github", 
-              url: "" 
-            },
-          ],
-        },
-        {
-          name: "VRITTI GARG",
-          role: "Interim Executive",
-          image: "/team/vritti-garg.jpg",
-          bio: "",
-          socials: [
-            {
-              platform: "linkedin",
-              url: "",
-            },
-            { 
-              platform: "github", 
-              url: "" 
-            },
-          ],
-        },
-      ],
-    },
-    {
-      name: "SOCIETY MENTORS",
-      icon: <Users className="w-6 h-6" />,
-      color: "from-violet-400 to-purple-500",
-      bgColor: "from-violet-500/20 to-purple-500/20",
-      members: [
-        {
-          name: "ARPIT RAJPUT",
-          role: "",
-          image: "/team/arpit-rajput.jpg",
-          bio: "",
-          socials: [
-            {
-              platform: "linkedin",
-              url: "",
-            },
-            { 
-              platform: "github", 
-              url: "" 
-            },
-          ],
-        },
-        {
-          name: "ATHARV TRIPATHI",
-          role: "",
-          image: "/team/atharv-tripathi.jpg",
-          bio: "",
-          socials: [
-            {
-              platform: "linkedin",
-              url: "",
-            },
-            { 
-              platform: "github", 
-              url: "" 
-            },
-          ],
-        },
-      ],
-    },
-    {
-      name: "CHIEF MARKETING OFFICER",
-      icon: <Video className="w-6 h-6" />,
-      color: "from-violet-400 to-purple-500",
-      bgColor: "from-violet-500/20 to-purple-500/20",
-      members: [
-        {
-          name: "KASHVI ARORA",
-          role: "",
-          image: "/team/Kashvi.jpg",
-          bio: "",
-          socials: [
-            {
-              platform: "linkedin",
-              url: "",
-            },
-            { 
-              platform: "github", 
-              url: "" 
             },
           ],
         },
@@ -1300,32 +1286,26 @@ export default function TeamSection({
   };
 
   return (
-    <section
-      id="team"
-      className="relative py-24 px-6 md:px-12"
-      ref={ref}
-    >
+    <section id="team" className="relative py-24 px-6 md:px-12" ref={ref}>
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         className="max-w-7xl mx-auto"
       >
-        <motion.div
-          variants={itemVariants}
-          className="text-center mb-20"
-        >
-          <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tight">
+        <motion.div variants={itemVariants} className="text-center mb-20">
+          <h2
+            className={`text-4xl md:text-6xl font-[Tropical] mb-8 tracking-tight hover:${accentColor} transition-all duration-500`}
+          >
             MEET OUR <span className={accentColor}>TEAM</span>
           </h2>
           <div className="h-1 w-32 bg-gradient-to-r from-green-400 to-emerald-500 mx-auto mb-10"></div>
           <p
             className={`${
               isDarkMode ? "text-gray-300" : "text-gray-700"
-            } text-lg md:text-xl max-w-4xl mx-auto leading-relaxed`}
+            } text-lg md:text-xl max-w-4xl mx-auto font-black leading-relaxed`}
           >
-            The passionate individuals behind CodeZen, dedicated to fostering
-            innovation and technological excellence.
+            Meet the amazing team behind Code-Synthesis
           </p>
         </motion.div>
 
@@ -1338,12 +1318,14 @@ export default function TeamSection({
             >
               {/* Category Header */}
               <div className="flex items-center justify-center mb-8">
-                <div
+                {/* <div
                   className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-full flex items-center justify-center mr-4 shadow-lg`}
                 >
                   <div className="text-black">{category.icon}</div>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-black tracking-wide">
+                </div> */}
+                <h3
+                  className={`text-2xl font-[Tropical] md:text-5xl ${accentColor} tracking-wide`}
+                >
                   {category.name}
                 </h3>
               </div>
@@ -1352,7 +1334,7 @@ export default function TeamSection({
               <div
                 className={`grid justify-end sm:items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-${Math.min(
                   category.members.length,
-                  3,
+                  3
                 )} gap-8`}
               >
                 {category.members.map((member, memberIndex) => (
@@ -1362,7 +1344,7 @@ export default function TeamSection({
                     className={`${cardClasses} border rounded-2xl p-8 h-full transition-all duration-300 group hover:shadow-2xl hover:shadow-green-500/10 relative overflow-hidden`}
                   >
                     <div
-                      className={`absolute inset-0 bg-gradient-to-br ${category.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                      className={`absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
                     ></div>
                     <div className="relative z-10 text-center h-full flex flex-col justify-between">
                       <div>

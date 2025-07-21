@@ -1,67 +1,58 @@
-"use client"
+"use client";
 
-import { Sun, Recycle, Droplets, Wind, Globe, Leaf } from "lucide-react"
+import { Sun, Recycle, Droplets, Wind, Globe, Leaf } from "lucide-react";
 
 interface TracksSectionProps {
-  isDarkMode: boolean
-  cardClasses: string
-  accentColor: string
+  isDarkMode: boolean;
+  cardClasses: string;
+  accentColor: string;
 }
 
-export default function TracksSection({ isDarkMode, cardClasses, accentColor }: TracksSectionProps) {
+export default function TracksSection({
+  isDarkMode,
+  cardClasses,
+  accentColor,
+}: TracksSectionProps) {
   const tracks = [
     {
       icon: <Sun className="w-6 h-6" />,
-      title: "Renewable Energy",
-      description: "Solar, wind, hydro, and other clean energy solutions",
+      title: "AI & ML for Sustainability",
       color: "from-yellow-400 to-orange-500",
-      projects: "25+ Projects",
-      difficulty: "Intermediate",
     },
     {
       icon: <Recycle className="w-6 h-6" />,
-      title: "Circular Economy",
-      description: "Waste reduction, recycling, and sustainable consumption",
+      title: "Web3 and blockchain for a better world",
       color: "from-green-400 to-emerald-500",
-      projects: "30+ Projects",
-      difficulty: "Beginner",
     },
     {
       icon: <Droplets className="w-6 h-6" />,
-      title: "Water Conservation",
-      description: "Smart water management and purification systems",
+      title: "Cybersecurity in a Green World",
       color: "from-blue-400 to-cyan-500",
-      projects: "20+ Projects",
-      difficulty: "Advanced",
     },
     {
       icon: <Wind className="w-6 h-6" />,
-      title: "Climate Action",
-      description: "Carbon footprint tracking and climate monitoring",
+      title: "IoT for Environmental Monitoring",
       color: "from-teal-400 to-green-500",
-      projects: "35+ Projects",
-      difficulty: "Intermediate",
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: "Smart Cities",
-      description: "IoT solutions for sustainable urban development",
+      title: "Game Development for Awareness",
       color: "from-purple-400 to-pink-500",
-      projects: "40+ Projects",
-      difficulty: "Advanced",
     },
     {
       icon: <Leaf className="w-6 h-6" />,
-      title: "Agriculture Tech",
-      description: "Precision farming and sustainable agriculture",
+      title: "Open Innovation",
       color: "from-lime-400 to-green-500",
-      projects: "28+ Projects",
-      difficulty: "Intermediate",
     },
-  ]
+  ];
 
   return (
-    <section id="tracks" className={`relative py-24 px-6 md:px-12 ${isDarkMode ? "bg-gray-900/20" : "bg-gray-50/50"}`}>
+    <section
+      id="tracks"
+      className={`relative py-24 px-6 md:px-12 ${
+        isDarkMode ? "bg-gray-900/20" : "bg-gray-50/50"
+      }`}
+    >
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tight">
@@ -69,10 +60,12 @@ export default function TracksSection({ isDarkMode, cardClasses, accentColor }: 
           </h2>
           <div className="h-1 w-32 bg-gradient-to-r from-green-400 to-emerald-500 mx-auto mb-10"></div>
           <p
-            className={`${isDarkMode ? "text-gray-300" : "text-gray-700"} text-lg md:text-xl max-w-4xl mx-auto leading-relaxed`}
+            className={`${
+              isDarkMode ? "text-gray-300" : "text-gray-700"
+            } text-lg md:text-xl max-w-4xl mx-auto leading-relaxed`}
           >
-            Choose your battlefield. Six exciting tracks, each focusing on different aspects of sustainable development
-            and green technology.
+            Choose your battlefield. Six exciting tracks, each focusing on
+            different aspects of sustainable development and green technology.
           </p>
         </div>
 
@@ -90,16 +83,19 @@ export default function TracksSection({ isDarkMode, cardClasses, accentColor }: 
                   {track.icon}
                 </div>
                 <h3 className="text-lg font-black mb-2">{track.title}</h3>
-                <p className={`${isDarkMode ? "text-gray-300" : "text-gray-700"} mb-3 leading-relaxed text-xs`}>
-                  {track.description}
-                </p>
                 <div className="flex justify-between items-center">
-                  <div className="text-green-400 text-xs font-bold">{track.projects}</div>
-                  <div
-                    className={`text-xs ${isDarkMode ? "bg-gray-800/50" : "bg-gray-100"} px-2 py-1 rounded-full ${isDarkMode ? "text-gray-400" : "text-gray-600"} font-medium`}
+                  {/* <div className="text-green-400 text-xs font-bold">
+                    {track.projects}
+                  </div> */}
+                  {/* <div
+                    className={`text-xs ${
+                      isDarkMode ? "bg-gray-800/50" : "bg-gray-100"
+                    } px-2 py-1 rounded-full ${
+                      isDarkMode ? "text-gray-400" : "text-gray-600"
+                    } font-medium`}
                   >
                     {track.difficulty}
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -107,5 +103,5 @@ export default function TracksSection({ isDarkMode, cardClasses, accentColor }: 
         </div>
       </div>
     </section>
-  )
+  );
 }
