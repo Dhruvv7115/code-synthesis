@@ -25,7 +25,7 @@ describe("HeroSection", () => {
   it("renders stats cards correctly", () => {
     render(<HeroSection {...mockProps} />);
 
-    expect(screen.getByText("3000+")).toBeInTheDocument();
+    expect(screen.getByText("5000+")).toBeInTheDocument();
     expect(screen.getByText("PARTICIPANTS")).toBeInTheDocument();
     expect(screen.getByText("₹1,00,000+")).toBeInTheDocument();
     expect(screen.getByText("IN PRIZES")).toBeInTheDocument();

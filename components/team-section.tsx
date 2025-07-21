@@ -756,6 +756,38 @@ export default function TeamSection({
             },
           ],
         },
+        {
+          name: "MANYA MADAN",
+          role: "Marketing Team",
+          image: "placeholder.svg?height=200&width=200",
+          bio: "Event coordination and logistics",
+          socials: [
+            {
+              platform: "linkedin",
+              url: "",
+            },
+            {
+              platform: "instagram",
+              url: "",
+            },
+          ],
+        },
+        {
+          name: "RIYA SEHGAL",
+          role: "Event Management Member",
+          image: "placeholder.svg?height=200&width=200",
+          bio: "Event coordination and logistics",
+          socials: [
+            {
+              platform: "linkedin",
+              url: "",
+            },
+            {
+              platform: "instagram",
+              url: "",
+            },
+          ],
+        },
       ],
     },
     {
@@ -768,6 +800,23 @@ export default function TeamSection({
           name: "RITURAJ",
           role: "Videography Lead",
           image: "/team/rituraj.jpg",
+          bio: "Leading social media strategy and engagement",
+          socials: [
+            {
+              platform: "linkedin",
+              url: "",
+            },
+            { platform: "github", url: "" },
+            {
+              platform: "instagram",
+              url: "",
+            },
+          ],
+        },
+        {
+          name: "AKASH KUMAR SHARMA",
+          role: "Videography Member",
+          image: "/team/Akash-kumar-sharma.jpg",
           bio: "Leading social media strategy and engagement",
           socials: [
             {
@@ -947,22 +996,6 @@ export default function TeamSection({
           ],
         },
         {
-          name: "MANYA MADAN",
-          role: "Event Management Member",
-          image: "placeholder.svg?height=200&width=200",
-          bio: "Event coordination and logistics",
-          socials: [
-            {
-              platform: "linkedin",
-              url: "",
-            },
-            {
-              platform: "instagram",
-              url: "",
-            },
-          ],
-        },
-        {
           name: "ABHISHEK KUMAR",
           role: "Event Management Member",
           image: "placeholder.svg?height=200&width=200",
@@ -991,22 +1024,6 @@ export default function TeamSection({
             {
               platform: "instagram",
               url: "https://www.instagram.com/ridhima_mittal11",
-            },
-          ],
-        },
-        {
-          name: "RIYA SEHGAL",
-          role: "Event Management Member",
-          image: "placeholder.svg?height=200&width=200",
-          bio: "Event coordination and logistics",
-          socials: [
-            {
-              platform: "linkedin",
-              url: "",
-            },
-            {
-              platform: "instagram",
-              url: "",
             },
           ],
         },
