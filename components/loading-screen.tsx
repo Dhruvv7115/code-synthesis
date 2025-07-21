@@ -86,7 +86,7 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
           transition={{ delay: 0.3, duration: 0.6 }}
           className="text-gray-400 text-lg md:text-xl mb-8 tracking-[0.3em] uppercase"
         >
-          48-HOUR HACKATHON
+          12-HOUR HACKATHON
         </motion.p>
 
         {/* Progress bar */}
