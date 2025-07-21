@@ -1312,11 +1312,11 @@ export default function TeamSection({
       >
         <motion.div variants={itemVariants} className="text-center mb-20">
           <h2
-            className={`text-4xl md:text-6xl font-[Tropical] mb-8 tracking-tight hover:${accentColor} transition-all duration-500`}
+            className={`text-4xl md:text-6xl font-black mb-8 tracking-tight hover:${accentColor} transition-all duration-500`}
           >
             MEET OUR <span className={accentColor}>TEAM</span>
           </h2>
-          <div className="h-1 w-32 bg-gradient-to-r from-green-400 to-emerald-500 mx-auto mb-10"></div>
+          <div className="h-1 w-40 bg-gradient-to-r from-green-400 via-emerald-400 to-lime-400 mx-auto mb-12 rounded-full" />{" "}
           <p
             className={`${
               isDarkMode ? "text-gray-300" : "text-gray-700"
@@ -1341,7 +1341,7 @@ export default function TeamSection({
                   <div className="text-black">{category.icon}</div>
                 </div> */}
                 <h3
-                  className={`text-2xl font-[Tropical] md:text-5xl ${accentColor} tracking-wide`}
+                  className={`text-2xl font-black md:text-5xl ${accentColor} tracking-wide`}
                 >
                   {category.name}
                 </h3>

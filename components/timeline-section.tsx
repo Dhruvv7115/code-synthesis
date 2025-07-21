@@ -61,7 +61,7 @@ export default function TimelineSection({
       time: "10:00 AM",
       title: "Hacking Begins",
       description:
-        "12 hours of intense coding, innovation, and collaboration starts",
+        "48 hours of intense coding, innovation, and collaboration starts",
       icon: <Trophy className="w-5 h-5" />,
       color: "from-purple-400 to-pink-500",
       last: false,
@@ -172,7 +172,7 @@ export default function TimelineSection({
           <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tight">
             EVENT <span className={accentColor}>TIMELINE</span>
           </h2>
-          <div className="h-1 w-32 bg-gradient-to-r from-green-400 to-emerald-500 mx-auto mb-10"></div>
+          <div className="h-1 w-40 bg-gradient-to-r from-green-400 via-emerald-400 to-lime-400 mx-auto mb-12 rounded-full" />
           <p
             className={`${
               isDarkMode ? "text-gray-300" : "text-gray-700"
@@ -203,7 +203,7 @@ export default function TimelineSection({
               isDarkMode ? "text-gray-300" : "text-gray-700"
             } text-lg md:text-xl max-w-3xl mx-auto leading-relaxed`}
           >
-            Your complete guide to the 12-hour journey of innovation,
+            Your complete guide to the 48-hour journey of innovation,
             collaboration, and competition.
           </p>
         </motion.div>

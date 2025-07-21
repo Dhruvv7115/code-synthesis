@@ -57,10 +57,10 @@ export default function FAQSection({
     >
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-8xl font-[Tropical]  tracking-tight mb-8 ">
+          <h2 className="text-4xl md:text-6xl font-black  tracking-tight mb-8 ">
             FREQUENTLY ASKED <span className={accentColor}>QUESTIONS</span>
           </h2>
-          <div className="h-1 w-32 bg-gradient-to-r from-green-400 to-emerald-500 mx-auto"></div>
+          <div className="h-1 w-40 bg-gradient-to-r from-green-400 via-emerald-400 to-lime-400 mx-auto mb-12 rounded-full" />
         </div>
 
         <div className="space-y-4">

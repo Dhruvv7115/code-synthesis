@@ -68,7 +68,7 @@ export default function MentorsSection({
         <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tight">
           EXPERT <span className={accentColor}>MENTORS</span>
         </h2>
-        <div className="h-1 w-32 bg-gradient-to-r from-green-400 to-emerald-500 mx-auto mb-10 "></div>
+        <div className="h-1 w-40 bg-gradient-to-r from-green-400 via-emerald-400 to-lime-400 mx-auto mb-12 rounded-full" />
         <div className="flex flex-col items-center justify-center min-h-[100px]">
           <div className="text-2xl md:text-3xl font-bold text-gray-400 animate-pulse">
             Mentor details to be revealed soon!
