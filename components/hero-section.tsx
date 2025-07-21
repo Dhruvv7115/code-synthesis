@@ -113,7 +113,7 @@ export default function HeroSection({
                 isDarkMode ? "text-gray-400" : "text-gray-600"
               } font-light tracking-[0.3em] uppercase`}
             >
-              48-HOUR HACKATHON
+              12-HOUR HACKATHON
             </h2>
             <div className="h-px bg-gradient-to-r from-transparent via-green-400 to-transparent flex-1 max-w-20"></div>
           </motion.div>
@@ -147,7 +147,7 @@ export default function HeroSection({
             className={`flex items-center space-x-3 ${cardClasses} px-4 py-2 rounded-full border shadow-lg hover:shadow-green-500/10 transition-all duration-300`}
           >
             <Clock className="w-4 h-4 text-green-400" />
-            <span className="font-bold text-sm">48 Hours</span>
+            <span className="font-bold text-sm">12 Hours</span>
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -174,7 +174,7 @@ export default function HeroSection({
                   <Users className="w-5 h-5 text-black" />
                 </div>
               </div>
-              <div className="text-xl font-black mb-1">3000+</div>
+              <div className="text-xl font-black mb-1">5000+</div>
               <div
                 className={`${
                   isDarkMode ? "text-gray-400" : "text-gray-600"

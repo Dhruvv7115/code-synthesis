@@ -781,6 +781,23 @@ export default function TeamSection({
             },
           ],
         },
+        {
+          name: "AKASH KUMAR SHARMA",
+          role: "Videography Member",
+          image: "/team/Akash-kumar-sharma.jpg",
+          bio: "Leading social media strategy and engagement",
+          socials: [
+            {
+              platform: "linkedin",
+              url: "",
+            },
+            { platform: "github", url: "" },
+            {
+              platform: "instagram",
+              url: "",
+            },
+          ],
+        },
       ],
     },
     {

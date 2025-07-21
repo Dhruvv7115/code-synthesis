@@ -14,7 +14,7 @@ describe("LoadingScreen", () => {
 
     expect(screen.getByText("CODE SYNTHESIS")).toBeInTheDocument()
     expect(screen.getByText("2025")).toBeInTheDocument()
-    expect(screen.getByText("48-HOUR HACKATHON")).toBeInTheDocument()
+    expect(screen.getByText(12-HOUR HACKATHON")).toBeInTheDocument()
   })
 
   it("shows loading text", () => {
