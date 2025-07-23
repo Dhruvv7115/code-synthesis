@@ -33,7 +33,7 @@ export default function PrizesSection({
           <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tight">
             PRIZES & <span className={accentColor}>REWARDS</span>
           </h2>
-          <div className="h-1 w-32 bg-gradient-to-r from-green-400 to-emerald-500 mx-auto mb-10"></div>
+          <div className="h-1 w-40 bg-gradient-to-r from-green-400 via-emerald-400 to-lime-400 mx-auto mb-12 rounded-full" />
           <p
             className={`${
               isDarkMode ? "text-gray-300" : "text-gray-700"
@@ -81,7 +81,7 @@ export default function PrizesSection({
               </div>
               <div className="flex items-center space-x-2">
                 <Trophy className="w-3 h-3 text-yellow-400" />
-                <span>Trophy Icon</span>
+                <span>Trophy</span>
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@ export default function PrizesSection({
                 </div>
                 <div className="flex items-center space-x-2">
                   <Trophy className="w-3 h-3 text-gray-400" />
-                  <span>Trophy Icon</span>
+                  <span>Trophy</span>
                 </div>
               </div>
             </div>
@@ -146,7 +146,7 @@ export default function PrizesSection({
                 </div>
                 <div className="flex items-center space-x-2">
                   <Trophy className="w-3 h-3 text-orange-400" />
-                  <span>Trophy Icon</span>
+                  <span>Trophy</span>
                 </div>
               </div>
             </div>
@@ -178,7 +178,7 @@ export default function PrizesSection({
               </div>
               <div className="flex items-center space-x-2">
                 <Trophy className="w-3 h-3 text-pink-400" />
-                <span>Trophy Icon</span>
+                <span>Trophy</span>
               </div>
             </div>
           </div>
@@ -209,7 +209,7 @@ export default function PrizesSection({
               </div>
               <div className="flex items-center space-x-2">
                 <Trophy className="w-3 h-3 text-blue-400" />
-                <span>Trophy Icon</span>
+                <span>Trophy</span>
               </div>
             </div>
           </div>
