@@ -3,16 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import {
-  Sun,
-  Recycle,
-  Droplets,
-  Wind,
-  Globe,
-  Leaf,
-  Sparkles,
-  Trophy,
-} from "lucide-react";
+import { Sun, Recycle, Droplets, Wind, Globe, Leaf } from "lucide-react";
 
 interface TracksSectionProps {
   isDarkMode: boolean;
@@ -97,6 +88,15 @@ export default function TracksSection({ isDarkMode }: TracksSectionProps) {
 
   const tracks = [
     {
+      icon: Globe,
+      title: "Duality AI Space Station",
+      description: "Sponsored track for space-tech sustainability solutions",
+      color: "from-indigo-400 to-blue-500",
+      bgGradient: "from-indigo-500/10 to-blue-500/10",
+      sponsored: true,
+      shineClass: "animate-shine-delayed-6",
+    },
+    {
       icon: Sun,
       title: "AI & ML for Sustainability",
       description:
@@ -136,15 +136,6 @@ export default function TracksSection({ isDarkMode }: TracksSectionProps) {
       color: "from-purple-400 to-pink-500",
       bgGradient: "from-purple-500/10 to-pink-500/10",
       shineClass: "animate-shine-delayed-4",
-    },
-    {
-      icon: Globe,
-      title: "Duality AI Space Station",
-      description: "Sponsored track for space-tech sustainability solutions",
-      color: "from-indigo-400 to-blue-500",
-      bgGradient: "from-indigo-500/10 to-blue-500/10",
-      sponsored: true,
-      shineClass: "animate-shine-delayed-6",
     },
     {
       icon: Leaf,
@@ -196,122 +187,117 @@ export default function TracksSection({ isDarkMode }: TracksSectionProps) {
         />
       </div>
 
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        className="max-w-7xl mx-auto relative z-10"
-      >
-        {/* Header Section */}
-        <motion.div variants={itemVariants} className="text-center mb-20">
-          <motion.div className="flex items-center justify-center mb-6">
-            {/* <Trophy className="w-8 h-8 text-emerald-400 mr-4" /> */}
-            <h2 className="text-5xl md:text-7xl font-black tracking-tight">
-              CHALLENGE <span className=" text-green-400">TRACKS</span>
-            </h2>
-            {/* <Sparkles className="w-8 h-8 text-emerald-400 ml-4" /> */}
+      {/* Main Content Container with Scale Applied */}
+      <div className="transform scale-80 origin-center">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="max-w-7xl mx-auto relative z-10"
+        >
+          {/* Header Section */}
+          <motion.div variants={itemVariants} className="text-center mb-20">
+            <motion.div className="flex items-center justify-center mb-6">
+              <h2 className="text-5xl md:text-6xl font-black tracking-tight">
+                CHALLENGE <span className=" text-green-400">TRACKS</span>
+              </h2>
+            </motion.div>
+            <motion.div
+              className="h-1 w-40 bg-gradient-to-r from-green-400 via-emerald-400 to-lime-400 mx-auto mb-12 rounded-full"
+              initial={{ scaleX: 0 }}
+              animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+              transition={{ delay: 0.5, duration: 1 }}
+            />
+            <motion.p
+              className={`${
+                isDarkMode ? "text-gray-300" : "text-gray-700"
+              } text-xl md:text-2xl max-w-5xl mx-auto leading-relaxed font-light`}
+              variants={itemVariants}
+            >
+              Choose your{" "}
+              <span className="text-emerald-400 font-medium">battlefield</span>.
+              Seven exciting tracks, each focusing on different aspects of{" "}
+              <span className="text-green-400 font-medium">
+                sustainable development
+              </span>{" "}
+              and green technology.
+            </motion.p>
           </motion.div>
 
-          <motion.div
-            className="h-1 w-40 bg-gradient-to-r from-green-400 via-emerald-400 to-lime-400 mx-auto mb-12 rounded-full"
-            initial={{ scaleX: 0 }}
-            animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          />
-
-          <motion.p
-            className={`${
-              isDarkMode ? "text-gray-300" : "text-gray-700"
-            } text-xl md:text-2xl max-w-5xl mx-auto leading-relaxed font-light`}
-            variants={itemVariants}
-          >
-            Choose your{" "}
-            <span className="text-emerald-400 font-medium">battlefield</span>.
-            Seven exciting tracks, each focusing on different aspects of{" "}
-            <span className="text-green-400 font-medium">
-              sustainable development
-            </span>{" "}
-            and green technology.
-          </motion.p>
-        </motion.div>
-
-        {/* Tracks Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {tracks.map((track, index) => (
-            <motion.div
-              key={index}
-              variants={cardVariants}
-              whileHover={{ scale: 1.05, y: -10 }}
-              className={`relative px-6 py-5 rounded-3xl backdrop-blur-xl ${
-                isDarkMode
-                  ? "bg-white/5 border border-white/10"
-                  : "bg-black/5 border border-black/10"
-              } shadow-2xl hover:shadow-3xl transition-all duration-500 group overflow-hidden ${
-                track.sponsored ? "ring-2 ring-yellow-400/50" : ""
-              }`}
-            >
-              {/* Continuous Shine Effect */}
-              <div className="absolute inset-0 group-hover:opacity-0 transition-opacity duration-500">
-                <div
-                  className={`absolute inset-0 bg-gradient-to-r from-transparent via-white/12 to-transparent transform -skew-x-12 ${track.shineClass}`}
-                />
-              </div>
-
-              {/* Background color on hover */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${track.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-              />
-
-              {/* Sponsored Badge */}
-              {track.sponsored && (
-                <div className="absolute top-3 right-3 z-20">
-                  <motion.div
-                    className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full shadow-lg"
-                    animate={{
-                      scale: [1, 1.05, 1],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Number.POSITIVE_INFINITY,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    SPONSORED
-                  </motion.div>
-                </div>
-              )}
-
-              {/* Card Content - Horizontal Layout */}
-              <div className="relative z-10 flex items-center space-x-4">
-                <motion.div
-                  whileHover={{ rotate: 360, scale: 1.1 }}
-                  transition={{ duration: 0.6 }}
-                  className="flex-shrink-0"
-                >
+          {/* Tracks Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {tracks.map((track, index) => (
+              <motion.div
+                key={index}
+                variants={cardVariants}
+                whileHover={{ scale: 1.05, y: -10 }}
+                className={`relative px-6 py-5 rounded-3xl backdrop-blur-xl ${
+                  isDarkMode
+                    ? "bg-white/5 border border-white/10"
+                    : "bg-black/5 border border-black/10"
+                } shadow-2xl hover:shadow-3xl transition-all duration-500 group overflow-hidden ${
+                  track.sponsored ? "ring-2 ring-yellow-400/50" : ""
+                }`}
+              >
+                {/* Continuous Shine Effect */}
+                <div className="absolute inset-0 group-hover:opacity-0 transition-opacity duration-500">
                   <div
-                    className={`w-12 h-12 bg-gradient-to-r ${track.color} rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300`}
-                  >
-                    <track.icon className="w-6 h-6 text-white" />
-                  </div>
-                </motion.div>
-
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-lg font-black mb-2 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                    {track.title}
-                  </h3>
-                  <p
-                    className={`${
-                      isDarkMode ? "text-gray-300" : "text-gray-700"
-                    } leading-relaxed text-sm font-light line-clamp-2`}
-                  >
-                    {track.description}
-                  </p>
+                    className={`absolute inset-0 bg-gradient-to-r from-transparent via-white/12 to-transparent transform -skew-x-12 ${track.shineClass}`}
+                  />
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
+                {/* Background color on hover */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${track.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                />
+                {/* Sponsored Badge */}
+                {track.sponsored && (
+                  <div className="absolute bottom-3 right-3 z-20">
+                    <motion.div
+                      className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full shadow-lg"
+                      animate={{
+                        scale: [1, 1.05, 1],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Number.POSITIVE_INFINITY,
+                        ease: "easeInOut",
+                      }}
+                    >
+                      SPONSORED
+                    </motion.div>
+                  </div>
+                )}
+                {/* Card Content - Horizontal Layout */}
+                <div className="relative z-10 flex items-center space-x-4">
+                  <motion.div
+                    whileHover={{ rotate: 360, scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
+                    className="flex-shrink-0"
+                  >
+                    <div
+                      className={`w-12 h-12 bg-gradient-to-r ${track.color} rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300`}
+                    >
+                      <track.icon className="w-6 h-6 text-white" />
+                    </div>
+                  </motion.div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-black mb-2 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                      {track.title}
+                    </h3>
+                    <p
+                      className={`${
+                        isDarkMode ? "text-gray-300" : "text-gray-700"
+                      } leading-relaxed text-sm font-light line-clamp-2`}
+                    >
+                      {track.description}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 }

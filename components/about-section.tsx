@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Lightbulb, Globe, Users, Sparkles, Target, Heart } from "lucide-react";
+import { Lightbulb, Globe, Users } from "lucide-react";
 
 interface AboutSectionProps {
   isDarkMode: boolean;
@@ -141,152 +141,143 @@ export default function AboutSection({ isDarkMode }: AboutSectionProps) {
         />
       </div>
 
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        className="max-w-7xl mx-auto relative z-10"
-      >
-        {/* Header Section */}
-        <motion.div variants={itemVariants} className="text-center mb-24">
-          <motion.div className="flex items-center justify-center mb-6">
-            {/* <Sparkles className="w-8 h-8 text-emerald-400 mr-4" /> */}
-            <h2 className="text-5xl md:text-7xl font-black tracking-tight">
-              ABOUT{" "}
-              <span className="text-green-400 bg-clip-text ">
-                CODE SYNTHESIS
-              </span>
-            </h2>
-            {/* <Sparkles className="w-8 h-8 text-emerald-400 ml-4" /> */}
-          </motion.div>
-
-          <motion.div
-            className="h-1 w-40 bg-gradient-to-r from-green-400 via-emerald-400 to-lime-400 mx-auto mb-12 rounded-full"
-            initial={{ scaleX: 0 }}
-            animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
-          />
-
-          <motion.p
-            className={`${
-              isDarkMode ? "text-gray-300" : "text-gray-700"
-            } text-xl md:text-2xl max-w-5xl mx-auto leading-relaxed font-light`}
-            variants={itemVariants}
-          >
-            <span className="text-emerald-400 font-medium">
-              CodeSynthesis🌱
-            </span>{" "}
-            is the flagship hackathon by{" "}
-            <span className="text-cyan-400 font-medium">CodeGeeks</span>, the
-            official coding society of GTB4CEC. Focused on the theme of{" "}
-            <span className="text-green-400 font-medium">Sustainability</span>,
-            it challenges innovators and developers to craft tech-driven
-            solutions for a greener, smarter world.
-          </motion.p>
-        </motion.div>
-
-        {/* Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-          {cards.map((card, index) => (
-            <motion.div
-              key={index}
-              variants={cardVariants}
-              whileHover={{ scale: 1.05, y: -15 }}
-              className={`relative px-6 py-7 rounded-3xl backdrop-blur-xl ${
-                isDarkMode
-                  ? "bg-white/5 border border-white/10"
-                  : "bg-black/5 border border-black/10"
-              } shadow-2xl hover:shadow-3xl transition-all duration-500 group overflow-hidden`}
-            >
-              {/* Continuous Shine Effect */}
-              <div className="absolute inset-0 group-hover:opacity-0 transition-opacity duration-500">
-                <div
-                  className={`absolute inset-0 bg-gradient-to-r from-transparent via-white/12 to-transparent transform -skew-x-12 ${card.shineClass}`}
-                />
-              </div>
-
-              {/* Background color on hover */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${card.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-              />
-
-              {/* Card Content */}
-              <div className="relative z-10 text-center">
-                <motion.div
-                  className="flex items-center justify-center mb-6"
-                  whileHover={{ rotate: 360, scale: 1.1 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <div
-                    className={`w-14 h-14 bg-gradient-to-r ${card.gradient} rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-shadow duration-300`}
-                  >
-                    <card.icon className="w-7 h-7 text-white" />
-                  </div>
-                </motion.div>
-
-                <h3 className="text-xl font-black mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                  {card.title}
-                </h3>
-
-                <p
-                  className={`${
-                    isDarkMode ? "text-gray-300" : "text-gray-700"
-                  } leading-relaxed text-sm font-light`}
-                >
-                  {card.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Mission Statement */}
+      {/* Main Content Container with Scale Applied */}
+      <div className="transform scale-80 origin-center">
         <motion.div
-          variants={itemVariants}
-          whileHover={{ scale: 1.02 }}
-          className={`relative text-center px-8 py-12 rounded-3xl backdrop-blur-xl ${
-            isDarkMode
-              ? "bg-white/5 border border-white/10"
-              : "bg-black/5 border border-black/10"
-          } shadow-2xl hover:shadow-3xl transition-all duration-500 group overflow-hidden`}
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="max-w-7xl mx-auto relative z-10"
         >
-          {/* Continuous Shine Effect for Mission Card */}
-          <div className="absolute inset-0 group-hover:opacity-0 transition-opacity duration-500">
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 animate-shine" />
-          </div>
-
-          {/* Background gradient on hover */}
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-cyan-500/5 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-          <div className="relative z-10">
-            <div className="flex items-center justify-center mb-6">
-              {/* <Target className="w-6 h-6 text-emerald-400 mr-4" /> */}
-              <h3 className="text-2xl md:text-3xl font-black bg-gradient-to-r text-white bg-clip-text text-transparent">
-                OUR MISSION
-              </h3>
-              {/* <Heart className="w-6 h-6 text-pink-400 ml-4" /> */}
-            </div>
-
-            <p
+          {/* Header Section */}
+          <motion.div variants={itemVariants} className="text-center mb-24">
+            <motion.div className="flex items-center justify-center mb-6">
+              <h2 className="text-5xl md:text-6xl font-black tracking-tight">
+                ABOUT{" "}
+                <span className="text-green-400 bg-clip-text ">
+                  CODE SYNTHESIS
+                </span>
+              </h2>
+            </motion.div>
+            <motion.div
+              className="h-1 w-40 bg-gradient-to-r from-green-400 via-emerald-400 to-lime-400 mx-auto mb-12 rounded-full"
+              initial={{ scaleX: 0 }}
+              animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+              transition={{ delay: 0.5, duration: 1 }}
+            />
+            <motion.p
               className={`${
                 isDarkMode ? "text-gray-300" : "text-gray-700"
-              } text-base md:text-lg leading-relaxed max-w-5xl mx-auto font-light`}
+              } text-xl md:text-2xl max-w-5xl mx-auto leading-relaxed font-light`}
+              variants={itemVariants}
             >
-              "To empower the next generation of{" "}
-              <span className="text-emerald-400 font-medium">developers</span>{" "}
-              and <span className="text-cyan-400 font-medium">innovators</span>{" "}
-              to create technology solutions that combat climate change and
-              promote sustainability. We believe that{" "}
-              <span className="text-green-400 font-medium">
-                code can be a catalyst
+              <span className="text-emerald-400 font-medium">
+                CodeSynthesis🌱
               </span>{" "}
-              for positive environmental change, and through CodeSynthesis,
-              we're building a community where ambitious ideas spark real-world
-              impact for a greener, smarter world."
-            </p>
+              is the flagship hackathon by{" "}
+              <span className="text-cyan-400 font-medium">CodeGeeks</span>, the
+              official coding society of GTB4CEC. Focused on the theme of{" "}
+              <span className="text-green-400 font-medium">Sustainability</span>
+              , it challenges innovators and developers to craft tech-driven
+              solutions for a greener, smarter world.
+            </motion.p>
+          </motion.div>
+
+          {/* Feature Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 max-w-5xl mx-auto">
+            {cards.map((card, index) => (
+              <motion.div
+                key={index}
+                variants={cardVariants}
+                whileHover={{ scale: 1.05, y: -15 }}
+                className={`relative px-6 py-7 rounded-3xl backdrop-blur-xl ${
+                  isDarkMode
+                    ? "bg-white/5 border border-white/10"
+                    : "bg-black/5 border border-black/10"
+                } shadow-2xl hover:shadow-3xl transition-all duration-500 group overflow-hidden`}
+              >
+                {/* Continuous Shine Effect */}
+                <div className="absolute inset-0 group-hover:opacity-0 transition-opacity duration-500">
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-r from-transparent via-white/12 to-transparent transform -skew-x-12 ${card.shineClass}`}
+                  />
+                </div>
+                {/* Background color on hover */}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${card.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                />
+                {/* Card Content */}
+                <div className="relative z-10 text-center">
+                  <motion.div
+                    className="flex items-center justify-center mb-6"
+                    whileHover={{ rotate: 360, scale: 1.1 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <div
+                      className={`w-14 h-14 bg-gradient-to-r ${card.gradient} rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-shadow duration-300`}
+                    >
+                      <card.icon className="w-7 h-7 text-white" />
+                    </div>
+                  </motion.div>
+                  <h3 className="text-xl font-black mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                    {card.title}
+                  </h3>
+                  <p
+                    className={`${
+                      isDarkMode ? "text-gray-300" : "text-gray-700"
+                    } leading-relaxed text-sm font-light`}
+                  >
+                    {card.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </div>
+
+          {/* Mission Statement */}
+          <motion.div
+            variants={itemVariants}
+            whileHover={{ scale: 1.02 }}
+            className={`relative text-center px-6 py-8 rounded-3xl backdrop-blur-xl max-w-5xl mx-auto ${
+              isDarkMode
+                ? "bg-white/5 border border-white/10"
+                : "bg-black/5 border border-black/10"
+            } shadow-2xl hover:shadow-3xl transition-all duration-500 group overflow-hidden`}
+          >
+            {/* Continuous Shine Effect for Mission Card */}
+            <div className="absolute inset-0 group-hover:opacity-0 transition-opacity duration-500">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 animate-shine" />
+            </div>
+            {/* Background gradient on hover */}
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 via-cyan-500/5 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative z-10">
+              <div className="flex items-center justify-center mb-6">
+                <h3 className="text-2xl md:text-3xl font-black bg-gradient-to-r text-white bg-clip-text text-transparent">
+                  OUR MISSION
+                </h3>
+              </div>
+              <p
+                className={`${
+                  isDarkMode ? "text-gray-300" : "text-gray-700"
+                } text-base md:text-lg leading-relaxed max-w-5xl mx-auto font-light`}
+              >
+                "To empower the next generation of{" "}
+                <span className="text-emerald-400 font-medium">developers</span>{" "}
+                and{" "}
+                <span className="text-cyan-400 font-medium">innovators</span> to
+                create technology solutions that combat climate change and
+                promote sustainability. We believe that{" "}
+                <span className="text-green-400 font-medium">
+                  code can be a catalyst
+                </span>{" "}
+                for positive environmental change, and through CodeSynthesis,
+                we're building a community where ambitious ideas spark
+                real-world impact for a greener, smarter world."
+              </p>
+            </div>
+          </motion.div>
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 }

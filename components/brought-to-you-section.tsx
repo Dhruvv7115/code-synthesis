@@ -60,7 +60,7 @@ export default function BroughtToYouSection({
           <h2 className="text-3xl md:text-5xl font-black mb-4 tracking-tight">
             BROUGHT TO YOU <span className={accentColor}>BY</span>
           </h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-green-400 to-emerald-500 mx-auto mb-6"></div>
+          <div className="h-1 w-40 bg-gradient-to-r from-green-400 via-emerald-400 to-lime-400 mx-auto mb-12 rounded-full" />{" "}
           <p
             className={`${
               isDarkMode ? "text-gray-400" : "text-gray-600"

@@ -1,8 +1,6 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import {
   Calendar,
   Clock,
@@ -10,7 +8,6 @@ import {
   Users,
   Trophy,
   MessageSquare,
-  Sparkles,
   Zap,
   Code,
   Lightbulb,
@@ -34,6 +31,13 @@ const shineKeyframes = `
   }
 `;
 
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 export default function HeroSection({ isDarkMode }: HeroSectionProps) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const mouseX = useMotionValue(0);
@@ -49,6 +53,7 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
       mouseX.set(clientX);
       mouseY.set(clientY);
     };
+
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [mouseX, mouseY]);
@@ -87,12 +92,51 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
     },
   };
 
+  const mouseButtonVariants = {
+    initial: { opacity: 0, y: 20 },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 2,
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+    hover: {
+      scale: 1.1,
+      y: -5,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut",
+      },
+    },
+    tap: {
+      scale: 0.95,
+      transition: {
+        duration: 0.1,
+      },
+    },
+  };
+
+  const scrollIndicatorVariants = {
+    animate: {
+      y: [0, 8, 0],
+      transition: {
+        duration: 2,
+        repeat: Number.POSITIVE_INFINITY,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <section
       id="home"
       className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center pt-20 overflow-hidden"
     >
       <style jsx>{shineKeyframes}</style>
+
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -128,6 +172,7 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
         initial="hidden"
         animate="visible"
         className="max-w-7xl mx-auto relative z-10"
+        style={{ scale: 0.9 }}
       >
         {/* Floating Icons */}
         <motion.div
@@ -155,7 +200,7 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
         </motion.div>
 
         {/* Main Title */}
-        <motion.div variants={itemVariants} className="mt-5 mb-16">
+        <motion.div variants={itemVariants} className=" mb-16">
           <motion.h1
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tight"
             initial={{ scale: 0.8, opacity: 0 }}
@@ -187,7 +232,6 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
               2025
             </motion.span>
           </motion.h1>
-
           <motion.div
             className="flex items-center justify-center space-x-6 mb-10"
             variants={itemVariants}
@@ -237,7 +281,7 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
         >
           {[
             { icon: Calendar, text: "Sep 27, 2025", color: "emerald" },
-            { icon: Clock, text: "48 Hours", color: "cyan" },
+            { icon: Clock, text: "12 Hours", color: "cyan" },
             { icon: MapPin, text: "Delhi, India", color: "green" },
           ].map((item, index) => (
             <motion.div
@@ -311,12 +355,10 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
               <div className="absolute inset-0 group-hover:opacity-0 transition-opacity duration-500">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent transform -skew-x-12 animate-shine" />
               </div>
-
               {/* Background color that shows on hover */}
               <div
                 className={`absolute inset-0 bg-gradient-to-br ${card.bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
               />
-
               {/* Rest of the card content remains the same */}
               <div className="relative z-10 flex  items-center justify-between">
                 <div className="flex items-center space-x-4">
@@ -334,7 +376,6 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
                     <div className="text-2xl font-black mb-1 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                       {card.value}
                     </div>
-
                     <div
                       className={`${
                         isDarkMode ? "text-gray-300" : "text-gray-600"
@@ -351,23 +392,64 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* CTA Button */}
-        {/* <motion.div variants={itemVariants}>
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button
-              onClick={() =>
-                window.open("https://discord.com/invite/NjESyTCdav", "_blank")
-              }
-              size="lg"
-              className="relative bg-gradient-to-r from-emerald-500 via-cyan-500 to-green-500 hover:from-emerald-400 hover:via-cyan-400 hover:to-green-400 text-black font-black px-20 py-8 text-2xl rounded-full transition-all duration-300 shadow-2xl hover:shadow-emerald-500/25 border-0 overflow-hidden group"
-            >
-              <span className="relative z-10">DIVE IN</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </Button>
-          </motion.div>
-        </motion.div> */}
       </motion.div>
+
+      {/* Transparent Mouse Button */}
+      <motion.button
+        variants={mouseButtonVariants}
+        initial="initial"
+        animate="animate"
+        whileHover="hover"
+        whileTap="tap"
+        onClick={() => scrollToSection("about")}
+        className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 group cursor-pointer`}
+        style={{ transform: "translateX(-50%) scale(0.85)" }}
+      >
+        <div className={`relative flex flex-col items-center space-y-2`}>
+          {/* Mouse Shape */}
+          <div
+            className={`
+            w-8 h-12 rounded-full border-2 
+            ${
+              isDarkMode
+                ? "border-emerald-400/60 bg-emerald-400/10"
+                : "border-emerald-500/60 bg-emerald-500/10"
+            } 
+            backdrop-blur-sm shadow-lg
+            group-hover:border-emerald-400 group-hover:bg-emerald-400/20
+            transition-all duration-300
+            flex items-start justify-center pt-2
+          `}
+          >
+            {/* Scroll Wheel */}
+            <motion.div
+              variants={scrollIndicatorVariants}
+              animate="animate"
+              className={`
+                w-1 h-2 rounded-full 
+                ${isDarkMode ? "bg-emerald-400" : "bg-emerald-500"}
+                group-hover:bg-emerald-300
+                transition-colors duration-300
+              `}
+            />
+          </div>
+
+          {/* Scroll Text */}
+          <motion.span
+            className={`
+              text-xs font-medium tracking-wider uppercase
+              ${isDarkMode ? "text-emerald-400/80" : "text-emerald-600/80"}
+              group-hover:text-emerald-400
+              transition-colors duration-300
+            `}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 2.5, duration: 0.5 }}
+          >
+            Scroll
+          </motion.span>
+        </div>
+      </motion.button>
     </section>
   );
 }

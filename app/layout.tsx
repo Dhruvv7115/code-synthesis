@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Head from "next/head";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Code Synthesis Hackathon",
@@ -32,7 +33,6 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-  themeColor: "#2ecc40",
   icons: {
     icon: "/favicon.ico",
   },
@@ -54,7 +54,10 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
         <title>Code Synthesis Hackathon</title>
       </Head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

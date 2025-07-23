@@ -12,6 +12,32 @@ body {
   }
 }
 
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background: black; /* Use site background */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0eb97b; /* Tailwind emerald-400 */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #0eb97b black;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

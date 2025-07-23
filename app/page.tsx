@@ -1,62 +1,70 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Sun, Moon } from "lucide-react"
-import "../styles/globals.css"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Sun, Moon } from "lucide-react";
+import "../styles/globals.css";
 
 // Import all components
-import LoadingScreen from "@/components/loading-screen"
-import Navigation from "@/components/navigation"
-import HeroSection from "@/components/hero-section"
-import AboutSection from "@/components/about-section"
-import BroughtToYouSection from "@/components/brought-to-you-section"
-import TracksSection from "@/components/tracks-section"
-import TimelineSection from "@/components/timeline-section"
-import MentorsSection from "@/components/mentors-section"
-import PrizesSection from "@/components/prizes-section"
-import SponsorsSection from "@/components/sponsors-section"
-import TeamSection from "@/components/team-section"
-import FAQSection from "@/components/faq-section"
-import Footer from "@/components/footer"
-import LazySection from "@/components/lazy-section"
+import LoadingScreen from "@/components/loading-screen";
+import Navigation from "@/components/navigation";
+import HeroSection from "@/components/hero-section";
+import AboutSection from "@/components/about-section";
+import BroughtToYouSection from "@/components/brought-to-you-section";
+import TracksSection from "@/components/tracks-section";
+import TimelineSection from "@/components/timeline-section";
+import MentorsSection from "@/components/mentors-section";
+import PrizesSection from "@/components/prizes-section";
+import SponsorsSection from "@/components/sponsors-section";
+import TeamSection from "@/components/team-section";
+import FAQSection from "@/components/faq-section";
+import Footer from "@/components/footer";
+import LazySection from "@/components/lazy-section";
 
 export default function CodeSynthesis() {
-  const [isDarkMode, setIsDarkMode] = useState(true)
-  const [isLoading, setIsLoading] = useState(true)
+  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   // Smooth scroll function
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode)
-  }
+    setIsDarkMode(!isDarkMode);
+  };
 
   const handleLoadingComplete = () => {
-    setIsLoading(false)
-  }
+    setIsLoading(false);
+  };
 
-  const themeClasses = isDarkMode ? "bg-black text-white" : "bg-white text-black"
+  const themeClasses = isDarkMode
+    ? "bg-black text-white"
+    : "bg-white text-black";
   const cardClasses = isDarkMode
     ? "bg-gray-900/80 border-gray-700/50 text-white"
-    : "bg-white/80 border-gray-200 text-black shadow-lg"
-  const accentColor = isDarkMode ? "text-green-400" : "text-green-600"
+    : "bg-white/80 border-gray-200 text-black shadow-lg";
+  const accentColor = isDarkMode ? "text-green-400" : "text-green-600";
 
   return (
     <>
-      <AnimatePresence>{isLoading && <LoadingScreen onLoadingComplete={handleLoadingComplete} />}</AnimatePresence>
+      <AnimatePresence>
+        {isLoading && (
+          <LoadingScreen onLoadingComplete={handleLoadingComplete} />
+        )}
+      </AnimatePresence>
 
       {!isLoading && (
-        <div className={`min-h-screen ${themeClasses} relative overflow-hidden transition-colors duration-300`}>
+        <div
+          className={`min-h-screen ${themeClasses} relative overflow-hidden transition-colors duration-300`}
+        >
           {/* Professional Grid & Lightning Background */}
-             {/* Enhanced animated background grid */}
-             <div
+          {/* Enhanced animated background grid */}
+          <div
             className={`fixed inset-0 ${
               isDarkMode
                 ? "bg-[linear-gradient(rgba(0,255,127,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,127,0.08)_1px,transparent_1px)]"
@@ -123,54 +131,93 @@ export default function CodeSynthesis() {
             ></motion.div>
           </div>
           {/* Navigation */}
-          <Navigation isDarkMode={isDarkMode} scrollToSection={scrollToSection} />
+          <Navigation
+            isDarkMode={isDarkMode}
+            scrollToSection={scrollToSection}
+          />
 
           {/* Hero Section */}
           <HeroSection isDarkMode={isDarkMode} cardClasses={cardClasses} />
 
           {/* About Section with Lazy Loading */}
           <LazySection>
-            <AboutSection isDarkMode={isDarkMode} cardClasses={cardClasses} accentColor={accentColor} />
+            <AboutSection
+              isDarkMode={isDarkMode}
+              cardClasses={cardClasses}
+              accentColor={accentColor}
+            />
           </LazySection>
 
           {/* Brought to You By Section */}
           <LazySection delay={0.1}>
-            <BroughtToYouSection isDarkMode={isDarkMode} cardClasses={cardClasses} accentColor={accentColor} />
+            <BroughtToYouSection
+              isDarkMode={isDarkMode}
+              cardClasses={cardClasses}
+              accentColor={accentColor}
+            />
           </LazySection>
 
           {/* Tracks Section with Lazy Loading */}
           <LazySection delay={0.2}>
-            <TracksSection isDarkMode={isDarkMode} cardClasses={cardClasses} accentColor={accentColor} />
+            <TracksSection
+              isDarkMode={isDarkMode}
+              cardClasses={cardClasses}
+              accentColor={accentColor}
+            />
           </LazySection>
 
           {/* Timeline Section with Lazy Loading */}
           <LazySection delay={0.1}>
-            <TimelineSection isDarkMode={isDarkMode} cardClasses={cardClasses} accentColor={accentColor} />
+            <TimelineSection
+              isDarkMode={isDarkMode}
+              cardClasses={cardClasses}
+              accentColor={accentColor}
+            />
           </LazySection>
 
           {/* Mentors Section with Lazy Loading */}
           <LazySection delay={0.1}>
-            <MentorsSection isDarkMode={isDarkMode} cardClasses={cardClasses} accentColor={accentColor} />
+            <MentorsSection
+              isDarkMode={isDarkMode}
+              cardClasses={cardClasses}
+              accentColor={accentColor}
+            />
           </LazySection>
 
           {/* Prizes Section with Lazy Loading */}
           <LazySection delay={0.3}>
-            <PrizesSection isDarkMode={isDarkMode} cardClasses={cardClasses} accentColor={accentColor} />
+            <PrizesSection
+              isDarkMode={isDarkMode}
+              cardClasses={cardClasses}
+              accentColor={accentColor}
+            />
           </LazySection>
 
           {/* Sponsors Section with Lazy Loading */}
           <LazySection delay={0.2}>
-            <SponsorsSection isDarkMode={isDarkMode} cardClasses={cardClasses} accentColor={accentColor} />
+            <SponsorsSection
+              isDarkMode={isDarkMode}
+              cardClasses={cardClasses}
+              accentColor={accentColor}
+            />
           </LazySection>
 
           {/* Team Section with Lazy Loading */}
           <LazySection delay={0.2}>
-            <TeamSection isDarkMode={isDarkMode} cardClasses={cardClasses} accentColor={accentColor} />
+            <TeamSection
+              isDarkMode={isDarkMode}
+              cardClasses={cardClasses}
+              accentColor={accentColor}
+            />
           </LazySection>
 
           {/* FAQ Section with Lazy Loading */}
           <LazySection delay={0.1}>
-            <FAQSection isDarkMode={isDarkMode} cardClasses={cardClasses} accentColor={accentColor} />
+            <FAQSection
+              isDarkMode={isDarkMode}
+              cardClasses={cardClasses}
+              accentColor={accentColor}
+            />
           </LazySection>
 
           {/* Footer with Lazy Loading */}
@@ -189,11 +236,15 @@ export default function CodeSynthesis() {
                   : "bg-white/90 hover:bg-gray-50/90 text-gray-800 border border-gray-200 shadow-lg"
               } backdrop-blur-sm transition-all duration-300 hover:scale-110`}
             >
-              {isDarkMode ? <Sun className="w-6 h-6" /> : <Moon className="w-6 h-6" />}
+              {isDarkMode ? (
+                <Sun className="w-6 h-6" />
+              ) : (
+                <Moon className="w-6 h-6" />
+              )}
             </Button>
           </div>
         </div>
       )}
     </>
-  )
+  );
 }
