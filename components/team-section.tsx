@@ -21,6 +21,8 @@ import {
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import { platform } from "os";
+import { url } from "inspector";
 
 interface SocialLink {
   platform: "github" | "linkedin" | "instagram";
@@ -211,7 +213,10 @@ export default function TeamSection({
               platform: "linkedin",
               url: "https://www.linkedin.com/in/kanishq-verma-6a0b6827a/",
             },
-            { platform: "github", url: "https://github.com/KanishqVerma" },
+            { 
+              platform: "github", 
+              url: "https://github.com/KanishqVerma" 
+            },
             {
               platform: "instagram",
               url: "https://www.instagram.com/__weird.kanishq__",
@@ -245,10 +250,9 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "https://www.linkedin.com/in/imskumarj",
+              url: "https://www.linkedin.com/in/leisha-choudhary-22b89a325",
             },
-            { platform: "github", url: "https://github.com/imskumarj" },
-            { platform: "instagram", url: "https://instagram.com/imskumarj" },
+            { platform: "github", url: "https://github.com/L-eisha" },
           ],
         },
         {
@@ -307,11 +311,15 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "https://www.linkedin.com/in/jeevidha-arora-b80a4a306/",
+            },
+            {
+              platform: "instagram",
+              url: "https://www.instagram.com/jeevidha.aaa/",
             },
             {
               platform: "github",
-              url: "",
+              url: "https://github.com/Jeevidhaa",
             },
           ],
         },
@@ -341,10 +349,13 @@ export default function TeamSection({
               platform: "linkedin",
               url: "https://www.linkedin.com/in/akshit-sharma-261626245",
             },
-            { platform: "github", url: "https://github.com/akshit014" },
             {
               platform: "instagram",
               url: "https://www.instagram.com/akshit.014",
+            },
+            { 
+              platform: "github", 
+              url: "https://github.com/akshit014" 
             },
           ],
         },
@@ -356,12 +367,11 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "https://www.linkedin.com/in/kashvi15",
+              url: "www.linkedin.com/in/dhruv-oberoi-81870a25b",
             },
-            { platform: "github", url: "https://github.com/Kashvi009" },
             {
               platform: "instagram",
-              url: "",
+              url: "https://www.instagram.com/dhrubii_/",
             },
           ],
         },
@@ -408,10 +418,13 @@ export default function TeamSection({
               platform: "linkedin",
               url: "https://www.linkedin.com/in/archana-gupta2006",
             },
-            { platform: "github", url: "https://github.com/Archana15-codes" },
             {
               platform: "instagram",
               url: "https://www.instagram.com/archanaaa_15",
+            },
+            { 
+              platform: "github", 
+              url: "https://github.com/Archana15-codes" 
             },
           ],
         },
@@ -439,11 +452,11 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "www.linkedin.com/in/saksham-didi-23b2b2239",
             },
             {
-              platform: "instagram",
-              url: "",
+              platform: "github",
+              url: "https://github.com/sakshamDS",
             },
           ],
         },
@@ -455,43 +468,43 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "https://www.linkedin.com/in/bhawesh-thawani-031250287",
             },
             {
               platform: "instagram",
-              url: "",
+              url: "https://www.instagram.com/bhawesh_thawani",
             },
           ],
         },
         {
-          name: "SATVIK PRUTHI",
+          name: "SATWIK PRUTHI",
           role: "Design Team",
           image: "placeholder.svg?height=200&width=200",
           bio: "Visual design and creative solutions",
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "https://www.linkedin.com/in/satwik-pruthi-49a16a307",
             },
             {
               platform: "instagram",
-              url: "",
+              url: "https://www.instagram.com/satwik_pruthi?igsh=MWYyYXBlZ21zbDlwOQ==",
             },
           ],
         },
         {
-          name: "NITIKA RATHEE",
+          name: "NITIKA RATHI",
           role: "Design Team",
-          image: "placeholder.svg?height=200&width=200",
+          image: "/team/nitika.png",
           bio: "Visual design and creative solutions",
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "http://linkedin.com/in/NitikaRathee",
             },
             {
-              platform: "instagram",
-              url: "",
+              platform: "github",
+              url: "https://github.com/nitikarathee",
             },
           ],
         },
@@ -519,16 +532,16 @@ export default function TeamSection({
         {
           name: "AYUSHI DUBEY",
           role: "Social Media Management",
-          image: "placeholder.svg?height=200&width=200",
+          image: "/team/ayushi-dubey.jpg",
           bio: "Managing public relations and communications",
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "https://www.linkedin.com/in/ayushi-dubey-57aa5a2b0",
             },
             {
               platform: "instagram",
-              url: "",
+              url: "https://www.instagram.com/ayushe_25",
             },
           ],
         },
@@ -550,7 +563,10 @@ export default function TeamSection({
               platform: "linkedin",
               url: "https://www.linkedin.com/in/tannishtha-sachdeva-6a089a2ba",
             },
-            { platform: "github", url: "https://github.com/Tan-3006" },
+            { 
+              platform: "github", 
+              url: "https://github.com/Tan-3006" 
+            },
             {
               platform: "instagram",
               url: "https://www.instagram.com/tannishtha.sachdeva",
@@ -567,10 +583,13 @@ export default function TeamSection({
               platform: "linkedin",
               url: "https://www.linkedin.com/in/shriya-bhambri-663a65337/",
             },
-            { platform: "github", url: "https://github.com/shriya-bhambri" },
             {
               platform: "instagram",
               url: "https://www.instagram.com/shriyaa_.06",
+            },
+            { 
+              platform: "github", 
+              url: "https://github.com/shriya-bhambri" 
             },
           ],
         },
@@ -582,12 +601,15 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "www.linkedin.com/in/mustafa-qadeer-3812b8329",
             },
-            { platform: "github", url: "" },
             {
               platform: "instagram",
-              url: "",
+              url: "https://www.instagram.com/mustafaqadeer1/",
+            },
+            { 
+              platform: "github", 
+              url: "https://github.com/MustafaQadeer" 
             },
           ],
         },
@@ -599,12 +621,15 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "https://www.linkedin.com/in/deepti-gupta-7b0672296",
             },
-            { platform: "github", url: "" },
             {
               platform: "instagram",
-              url: "",
+              url: "https://www.instagram.com/deeptigupta766",
+            },
+            { 
+              platform: "github", 
+              url: "https://github.com/Deepti302006" 
             },
           ],
         },
@@ -624,12 +649,11 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "https://www.linkedin.com/in/palak-bedi/",
+              url: "https://www.linkedin.com/in/ishan-kamra-13aaaa334/",
             },
-            { platform: "github", url: "https://github.com/palakbedii" },
             {
               platform: "instagram",
-              url: "https://www.instagram.com/palakbedii",
+              url: "https://www.instagram.com/ishan_151206/profilecard/",
             },
           ],
         },
@@ -652,7 +676,7 @@ export default function TeamSection({
         {
           name: "SHUBHAM RANJAN",
           role: "Photography Team",
-          image: "placeholder.svg?height=200&width=200",
+          image: "/team/shubham-ranjan.jpg",
           bio: "Creating and editing video content",
           socials: [
             {
@@ -694,17 +718,20 @@ export default function TeamSection({
         {
           name: "KHUSHI VERMA",
           role: "Marketing Team",
-          image: "/team/Khushi-verma.jpg",
+          image: "/team/khushi-verma.jpg",
           bio: "Coordinating project activities and teams",
           socials: [
             {
               platform: "linkedin",
               url: "https://www.linkedin.com/in/khushi-verma-a25911280",
             },
-            { platform: "github", url: "https://github.com/Khushiv0707" },
             {
               platform: "instagram",
               url: "https://www.instagram.com/_khusheyyy/",
+            },
+            { 
+              platform: "github", 
+              url: "https://github.com/Khushiv0707" 
             },
           ],
         },
@@ -716,44 +743,44 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "https://www.linkedin.com/in/prarthna-punpher-b3354131a",
             },
             {
               platform: "instagram",
-              url: "",
+              url: "https://www.instagram.com/prarthna_276/",
             },
           ],
         },
         {
           name: "KRISH KAPOOR",
           role: "Marketing Team",
-          image: "placeholder.svg?height=200&width=200",
+          image: "/team/krishkapoor.jpg",
           bio: "Project management and team coordination",
           socials: [
             {
               platform: "linkedin",
-              url: "",
-            },
-            {
-              platform: "instagram",
-              url: "",
+              url: "https://www.linkedin.com/in/krish-kapoor-b83075360/",
             },
           ],
         },
         {
-          name: "AYUSH MEHRA",
+          name: "AAYUSH MEHRA",
           role: "Marketing Team",
-          image: "placeholder.svg?height=200&width=200",
+          image: "/team/aayushmehra.jpg",
           bio: "Project management and team coordination",
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "https://www.linkedin.com/in/aayush-mehra-2725162b6",
             },
             {
               platform: "instagram",
-              url: "",
+              url: "https://www.instagram.com/aayushmehra_1010",
             },
+            {
+              platform: "github",
+              url: "https://github.com/AayushMehra10"
+            }
           ],
         },
         {
@@ -804,12 +831,15 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "https://www.linkedin.com/in/rituraj-kumar-0020761b8",
             },
-            { platform: "github", url: "" },
             {
               platform: "instagram",
-              url: "",
+              url: "https://www.instagram.com/iamraj_2003",
+            },
+            { 
+              platform: "github", 
+              url: "https://github.com/Rituraj552003" 
             },
           ],
         },
@@ -846,9 +876,16 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "https://www.linkedin.com/in/leisha-choudhary-22b89a325",
+              url: "https://www.linkedin.com/in/adarsh-kumar-6221762b4",
             },
-            { platform: "github", url: "https://github.com/L-eisha" },
+            { 
+              platform: "github", 
+              url: "https://github.com/Its-Adarshkumar" 
+            },
+            {
+              platform: "instagram",
+              url: "https://www.instagram.com/its_adarshsinghrajput/",
+            },
           ],
         },
         {
@@ -859,11 +896,15 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "https://www.linkedin.com/in/riya-nagpal-56aa96327",
             },
             {
               platform: "instagram",
-              url: "",
+              url: "https://www.instagram.com/riyanagpal__12",
+            },
+            {
+              platform: "github",
+              url: "https://github.com/RiyaNagpal12",
             },
           ],
         },
@@ -884,18 +925,18 @@ export default function TeamSection({
           ],
         },
         {
-          name: "PANKAJ",
+          name: "PANKAJ KUMAR",
           role: "Event Management Member",
-          image: "placeholder.svg?height=200&width=200",
+          image: "/team/pankaj-kumar.jpg",
           bio: "Event coordination and logistics",
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "https://www.linkedin.com/in/pankaj-kumar-917156352/",
             },
             {
               platform: "instagram",
-              url: "",
+              url: "https://www.instagram.com/_pankaj._27",
             },
           ],
         },
@@ -907,27 +948,31 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "https://www.linkedin.com/in/arjun-pant-956246289",
             },
             {
               platform: "instagram",
-              url: "",
+              url: "https://www.instagram.com/arjunpant74",
             },
           ],
         },
         {
-          name: "SHREYA",
+          name: "SHREYA MITTAL",
           role: "Event Management Member",
           image: "placeholder.svg?height=200&width=200",
           bio: "Event coordination and logistics",
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "https://www.linkedin.com/in/shreya-mittal-79a838225",
             },
             {
               platform: "instagram",
-              url: "",
+              url: "https://www.instagram.com/_.shreyamittal_06",
+            },
+            {
+              platform: "github",
+              url: "https://github.com/shreya4114",
             },
           ],
         },
@@ -939,18 +984,18 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "https://www.linkedin.com/in/gurneet-sokhi-979529326",
             },
             {
               platform: "instagram",
-              url: "",
+              url: "https://www.instagram.com/sokhigurneet",
             },
           ],
         },
         {
           name: "VAIBHAV",
           role: "Event Management Member",
-          image: "placeholder.svg?height=200&width=200",
+          image: "/team/vaibhav.jpg",
           bio: "Event coordination and logistics",
           socials: [
             {
@@ -971,11 +1016,11 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "https://www.linkedin.com/in/annu-dagar-40655431b",
             },
             {
               platform: "instagram",
-              url: "",
+              url: "https://www.instagram.com/annudagar19",
             },
           ],
         },
@@ -987,27 +1032,47 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "https://www.linkedin.com/in/vanshika-gulati-58749b333",
             },
             {
               platform: "instagram",
-              url: "",
+              url: "https://www.instagram.com/vanshikaa2506	",
+            },
+          ],
+        },
+        {
+          name: "MANYA MADAN",
+          role: "Event Management Member",
+          image: "/team/manya.jpg",
+          bio: "Event coordination and logistics",
+          socials: [
+            {
+              platform: "linkedin",
+              url: "https://www.linkedin.com/in/manya-madan-732172283/",
+            },
+            {
+              platform: "instagram",
+              url: "https://www.instagram.com/yessitsmanya",
             },
           ],
         },
         {
           name: "ABHISHEK KUMAR",
           role: "Event Management Member",
-          image: "placeholder.svg?height=200&width=200",
+          image: "/team/abhishek-kumar.jpg",
           bio: "Event coordination and logistics",
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "www.linkedin.com/in/absk-kr",
             },
             {
               platform: "instagram",
-              url: "",
+              url: "www.instagram.com/abhishekkr3104",
+            },
+            {
+              platform: "github",
+              url: "https://github.com/Abskrdev20",
             },
           ],
         },
@@ -1027,6 +1092,22 @@ export default function TeamSection({
             },
           ],
         },
+        {
+          name: "RIYA SEHGAL",
+          role: "Event Management Member",
+          image: "/team/riya-sehgal.jpg",
+          bio: "Event coordination and logistics",
+          socials: [
+            {
+              platform: "linkedin",
+              url: "https://www.linkedin.com/in/riya-sehgal-790439327",
+            },
+            {
+              platform: "instagram",
+              url: "https://www.instagram.com/riya.iaaaa",
+            },
+          ],
+        },
       ],
     },
     {
@@ -1043,12 +1124,11 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "https://www.linkedin.com/in/shubham-kumar-b77a67226",
+              url: "https://www.linkedin.com/in/ayush-mishra-0654422b7",
             },
-            { platform: "github", url: "https://github.com/shubhammgits" },
             {
               platform: "instagram",
-              url: "https://www.instagram.com/shhshubham",
+              url: "https://www.instagram.com/ayushmishra_2005",
             },
           ],
         },
@@ -1062,7 +1142,10 @@ export default function TeamSection({
               platform: "linkedin",
               url: "https://www.linkedin.com/in/harsh-singhal-oo7/",
             },
-            { platform: "github", url: "https://github.com/Harsh0007-max" },
+            { 
+              platform: "github", 
+              url: "https://github.com/Harsh0007-max" 
+            },
             {
               platform: "instagram",
               url: "https://www.instagram.com/harshsinghal2007",
@@ -1077,12 +1160,15 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "https://www.linkedin.com/in/harsh-singhal-oo7/",
+              url: "https://tinyurl.com/Adarsh-Mishra-linkedin",
             },
-            { platform: "github", url: "https://github.com/Harsh0007-max" },
+            { 
+              platform: "github", 
+              url: "https://github.com/Harsh0007-max" 
+            },
             {
               platform: "instagram",
-              url: "https://www.instagram.com/harshsinghal2007",
+              url: "https://github.com/Adarsh-me",
             },
           ],
         },
@@ -1153,12 +1239,16 @@ export default function TeamSection({
         {
           name: "NAINCY RAJ SINGH",
           role: "DSA Co-Lead",
-          image: "placeholder.svg?height=200&width=200",
+          image: "/team/naincy.jpg",
           bio: "Data Structures and Algorithms specialist",
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "https://www.linkedin.com/in/naincy-raj-singh-4161bb301",
+            },
+            {
+              platform: "instagram",
+              url: "https://www.instagram.com/naincy._.rs",
             },
             {
               platform: "github",
@@ -1174,11 +1264,11 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "http://linkedin.com/in/ansh-kumar-rajput-a5b184296",
             },
             {
               platform: "github",
-              url: "",
+              url: "https://github.com/anshrajput-tech",
             },
           ],
         },
@@ -1190,11 +1280,15 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "https://www.linkedin.com/in/vritti-garg-87a197298",
+            },
+            {
+              platform: "instagram",
+              url: "https://www.instagram.com/vritti1512",
             },
             {
               platform: "github",
-              url: "",
+              url: "https://github.com/Vritti1215",
             },
           ],
         },
@@ -1215,18 +1309,18 @@ export default function TeamSection({
           ],
         },
         {
-          name: "ANSH",
+          name: "ANSH JARYAL",
           role: "AIML Lead",
           image: "placeholder.svg?height=200&width=200",
           bio: "Artificial Intelligence and Machine Learning expertise",
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "https://www.linkedin.com/in/ansh-jaryal-1246872b3",
             },
             {
-              platform: "github",
-              url: "",
+              platform: "instagram",
+              url: "https://www.instagram.com/ansh_jaryal_",
             },
           ],
         },
@@ -1249,16 +1343,20 @@ export default function TeamSection({
         {
           name: "KRISH MITTAL",
           role: "Game Dev Lead",
-          image: "placeholder.svg?height=200&width=200",
+          image: "/team/krish-mittal.jpg",
           bio: "",
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "www.linkedin.com/in/krish177",
+            },
+            {
+              platform: "instagram",
+              url: "https://www.instagram.com/krishmittal177/",
             },
             {
               platform: "github",
-              url: "",
+              url: "https://github.com/Krish-Mittal",
             },
           ],
         },
