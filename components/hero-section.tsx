@@ -402,7 +402,7 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
         whileHover="hover"
         whileTap="tap"
         onClick={() => scrollToSection("about")}
-        className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 group cursor-pointer`}
+        className={`hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 group cursor-pointer`}
         style={{ transform: "translateX(-50%) scale(0.85)" }}
       >
         <div className={`relative flex flex-col items-center space-y-2`}>

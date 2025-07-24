@@ -917,12 +917,12 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "",
+              url: "https://www.linkedin.com/in/geet-gulati-69941234a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
             },
             { platform: "github", url: "" },
             {
               platform: "instagram",
-              url: "",
+              url: "https://www.instagram.com/geett_1234?igsh=eXJxYzBvZmpjc2F6",
             },
           ],
         },

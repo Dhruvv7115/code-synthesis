@@ -155,7 +155,7 @@ export default function Navigation({
         transition={{ duration: 0.3 }}
         className={`lg:hidden overflow-hidden ${
           isScrolled
-            ? "bg-blue-600/95 backdrop-blur-md border-t border-blue-500/50"
+            ? "bg-transparent backdrop-blur-md border-t border-transparent"
             : isDarkMode
             ? "bg-black/95 backdrop-blur-md border-t border-gray-800/50"
             : "bg-white/95 backdrop-blur-md border-t border-gray-200/50"
@@ -193,7 +193,7 @@ export default function Navigation({
           >
             <Button
               onClick={handleRegisterClick}
-              className="relative overflow-hidden w-full bg-gradient-to-r from-emerald-500 via-green-500 to-lime-500 hover:from-emerald-400 hover:via-green-400 hover:to-lime-400 text-black font-bold py-4 rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-emerald-500/30 border-2 border-emerald-400/20 hover:border-emerald-400/40 group"
+              className="relative overflow-hidden w-full bg-gray-100 text-black   font-bold py-4 rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-emerald-500/30 border-2 border-gray-400 hover:border-gray-500 group"
             >
               {/* Animated background shine */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
