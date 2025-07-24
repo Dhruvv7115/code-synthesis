@@ -61,7 +61,7 @@ export default function TimelineSection({
       time: "10:00 AM",
       title: "Hacking Begins",
       description:
-        "48 hours of intense coding, innovation, and collaboration starts",
+        "9 hours of intense coding, innovation, and collaboration starts",
       icon: <Trophy className="w-5 h-5" />,
       color: "from-purple-400 to-pink-500",
       last: false,

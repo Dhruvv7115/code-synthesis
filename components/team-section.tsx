@@ -180,7 +180,7 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "https://www.linkedin.com/in/arpitrajput",
+              url: "https://www.linkedin.com/in/arpit-rajput-831393213/",
             },
             {
               platform: "github",
@@ -221,7 +221,6 @@ export default function TeamSection({
       color: "from-green-400 to-emerald-500",
       bgColor: "from-green-500/20 to-emerald-500/20",
       members: [
-       
         {
           name: "ASHISH KUMAR",
           role: "Lead-Organiser",
@@ -233,8 +232,8 @@ export default function TeamSection({
             { platform: "instagram", url: "" },
           ],
         },
-        
-         {
+
+        {
           name: "KANISHQ VERMA",
           role: "Lead-Organiser",
           image: "/team/kanishq-verma.png",
@@ -896,7 +895,7 @@ export default function TeamSection({
         {
           name: "SHUBHAM RANJAN",
           role: "Photography Team",
-          image: "/team/shubham-ranjan.jpg",
+          image: "/team/Shubham-Ranjan.jpg",
           bio: "Creating and editing video content",
           socials: [
             {
@@ -935,7 +934,7 @@ export default function TeamSection({
       color: "from-cyan-400 to-blue-500",
       bgColor: "from-cyan-500/20 to-blue-500/20",
       members: [
-         {
+        {
           name: "MANYA MADAN",
           role: "Marketing Team Lead",
           image: "/team/Manya.jpg",
@@ -954,7 +953,7 @@ export default function TeamSection({
         {
           name: "KHUSHI VERMA",
           role: "Marketing Team",
-          image: "/team/khushi-verma.jpg",
+          image: "/team/Khushi-verma.jpg",
           bio: "Coordinating project activities and teams",
           socials: [
             {
@@ -990,7 +989,7 @@ export default function TeamSection({
         {
           name: "KRISH KAPOOR",
           role: "Marketing Team",
-          image: "/team/krishkapoor.jpg",
+          image: "/team/KrishKapoor.jpg",
           bio: "Project management and team coordination",
           socials: [
             {
@@ -1002,7 +1001,7 @@ export default function TeamSection({
         {
           name: "AAYUSH MEHRA",
           role: "Marketing Team",
-          image: "/team/aayushmehra.jpg",
+          image: "/team/AayushMehra.jpg",
           bio: "Project management and team coordination",
           socials: [
             {
@@ -1019,7 +1018,7 @@ export default function TeamSection({
             },
           ],
         },
-       
+
         {
           name: "RIYA SEHGAL",
           role: "Marketing Team",
@@ -1092,7 +1091,7 @@ export default function TeamSection({
         {
           name: "ADARSH KUMAR",
           role: "Event Management Lead",
-          image: "/team/adarsh.jpg",
+          image: "/team/Adarsh.jpg",
           bio: "Coordinating event logistics and operations",
           socials: [
             {
@@ -1216,7 +1215,7 @@ export default function TeamSection({
         {
           name: "VAIBHAV",
           role: "Event Management Member",
-          image: "/team/vaibhav.jpg",
+          image: "/team/Vaibhav.jpg",
           bio: "Event coordination and logistics",
           socials: [
             {
@@ -1232,7 +1231,7 @@ export default function TeamSection({
         {
           name: "ANNU DAGAR",
           role: "Event Management Member",
-          image: "/team/annu-dagar.jpg",
+          image: "/team/Annu-dagar.jpg",
           bio: "Event coordination and logistics",
           socials: [
             {
@@ -1340,7 +1339,7 @@ export default function TeamSection({
         {
           name: "AYUSH MISHRA",
           role: "Logistics Lead",
-          image: "/team/ayush-mishra.jpg",
+          image: "/team/Ayush-mishra.jpg",
           bio: "Leading social media strategy and engagement",
           socials: [
             {

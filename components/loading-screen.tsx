@@ -1,29 +1,31 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useEffect, useState } from "react"
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 interface LoadingScreenProps {
-  onLoadingComplete: () => void
+  onLoadingComplete: () => void;
 }
 
-export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps) {
-  const [progress, setProgress] = useState(0)
+export default function LoadingScreen({
+  onLoadingComplete,
+}: LoadingScreenProps) {
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
-          clearInterval(timer)
-          setTimeout(onLoadingComplete, 300)
-          return 100
+          clearInterval(timer);
+          setTimeout(onLoadingComplete, 300);
+          return 100;
         }
-        return prev + 2
-      })
-    }, 20)
+        return prev + 2;
+      });
+    }, 20);
 
-    return () => clearInterval(timer)
-  }, [onLoadingComplete])
+    return () => clearInterval(timer);
+  }, [onLoadingComplete]);
 
   return (
     <motion.div
@@ -76,7 +78,9 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
           <span className="bg-gradient-to-r from-green-400 via-emerald-400 to-lime-400 bg-clip-text text-transparent">
             CODE SYNTHESIS
           </span>
-          <span className="block md:inline md:ml-6 bg-gradient-to-r from-green-400 via-emerald-400 to-lime-400 bg-clip-text text-transparent">2025</span>
+          <span className="block md:inline md:ml-6 bg-gradient-to-r from-green-400 via-emerald-400 to-lime-400 bg-clip-text text-transparent">
+            2025
+          </span>
         </motion.h1>
 
         {/* Subtitle */}
@@ -86,7 +90,7 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
           transition={{ delay: 0.3, duration: 0.6 }}
           className="text-gray-400 text-lg md:text-xl mb-8 tracking-[0.3em] uppercase"
         >
-          12-HOUR HACKATHON
+          9-HOUR HACKATHON
         </motion.p>
 
         {/* Progress bar */}
@@ -114,5 +118,5 @@ export default function LoadingScreen({ onLoadingComplete }: LoadingScreenProps)
         </motion.p>
       </div>
     </motion.div>
-  )
+  );
 }

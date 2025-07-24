@@ -250,7 +250,7 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
             >
-              12-HOUR HACKATHON
+              9-HOUR HACKATHON
             </motion.h2>
             <motion.div
               className="h-px bg-gradient-to-r from-transparent via-emerald-400 to-transparent flex-1 max-w-32"
@@ -281,7 +281,7 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
         >
           {[
             { icon: Calendar, text: "Sep 27, 2025", color: "emerald" },
-            { icon: Clock, text: "12 Hours", color: "cyan" },
+            { icon: Clock, text: "9 Hours", color: "cyan" },
             { icon: MapPin, text: "Delhi, India", color: "green" },
           ].map((item, index) => (
             <motion.div
@@ -316,7 +316,7 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
             {
               icon: Trophy,
               value: "₹3,00,000+",
-              label: "IN PRIZES",
+              label: "PRIZEPOOL",
               subtitle: "+ Mentorship & Funding",
               gradient: "from-yellow-500 to-orange-500",
               bgGradient: "from-yellow-500/10 to-orange-500/10",
