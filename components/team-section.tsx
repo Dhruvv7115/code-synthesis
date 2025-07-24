@@ -221,7 +221,20 @@ export default function TeamSection({
       color: "from-green-400 to-emerald-500",
       bgColor: "from-green-500/20 to-emerald-500/20",
       members: [
+       
         {
+          name: "ASHISH KUMAR",
+          role: "Lead-Organiser",
+          image: "/team/ashish-kumar.jpg",
+          bio: "Coordinating with partners and stakeholders",
+          socials: [
+            { platform: "linkedin", url: "" },
+            { platform: "github", url: "" },
+            { platform: "instagram", url: "" },
+          ],
+        },
+        
+         {
           name: "KANISHQ VERMA",
           role: "Lead-Organiser",
           image: "/team/kanishq-verma.png",
@@ -239,17 +252,6 @@ export default function TeamSection({
               platform: "instagram",
               url: "https://www.instagram.com/__weird.kanishq__",
             },
-          ],
-        },
-        {
-          name: "ASHISH KUMAR",
-          role: "Lead-Organise",
-          image: "/team/ashish-kumar.jpg",
-          bio: "Coordinating with partners and stakeholders",
-          socials: [
-            { platform: "linkedin", url: "" },
-            { platform: "github", url: "" },
-            { platform: "instagram", url: "" },
           ],
         },
       ],
@@ -276,7 +278,7 @@ export default function TeamSection({
         {
           name: "NAMAN GAMBHIR",
           role: "Co-Organiser",
-          image: "/team/naman-image.jpg",
+          image: "/team/Naman.jpg",
           bio: "Leading marketing campaigns and outreach",
           socials: [
             {
@@ -544,7 +546,7 @@ export default function TeamSection({
         {
           name: "ANSH JARYAL",
           role: "AIML Lead",
-          image: "placeholder.svg?height=200&width=200",
+          image: "/team/Ansh Jaryal.png",
           bio: "Artificial Intelligence and Machine Learning expertise",
           socials: [
             {
@@ -581,7 +583,7 @@ export default function TeamSection({
           socials: [
             {
               platform: "linkedin",
-              url: "www.linkedin.com/in/krish177",
+              url: "https://www.linkedin.com/in/krish177/",
             },
             {
               platform: "instagram",
@@ -794,7 +796,7 @@ export default function TeamSection({
         {
           name: "SHRIYA BHAMBRI",
           role: "Content Co-Lead",
-          image: "/team/shriya-bhambri.jpg",
+          image: "/team/Shriya pic.jpg",
           bio: "Content creation and storytelling",
           socials: [
             {
@@ -911,7 +913,7 @@ export default function TeamSection({
         {
           name: "GEET GULATI",
           role: "Photography Team",
-          image: "placeholder.svg?height=200&width=200",
+          image: "/team/Geet Gulati.png",
           bio: "Capturing visual stories and moments",
           socials: [
             {
@@ -933,6 +935,22 @@ export default function TeamSection({
       color: "from-cyan-400 to-blue-500",
       bgColor: "from-cyan-500/20 to-blue-500/20",
       members: [
+         {
+          name: "MANYA MADAN",
+          role: "Marketing Team Lead",
+          image: "/team/Manya.jpg",
+          bio: "Event coordination and logistics",
+          socials: [
+            {
+              platform: "linkedin",
+              url: "https://www.linkedin.com/in/manya-madan-732172283/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            },
+            {
+              platform: "instagram",
+              url: "https://www.instagram.com/yessitsmanya",
+            },
+          ],
+        },
         {
           name: "KHUSHI VERMA",
           role: "Marketing Team",
@@ -1001,25 +1019,10 @@ export default function TeamSection({
             },
           ],
         },
-        {
-          name: "MANYA MADAN",
-          role: "Marketing Team",
-          image: "/team/Manya.jpg",
-          bio: "Event coordination and logistics",
-          socials: [
-            {
-              platform: "linkedin",
-              url: "https://www.linkedin.com/in/manya-madan-732172283/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-            },
-            {
-              platform: "instagram",
-              url: "https://www.instagram.com/yessitsmanya",
-            },
-          ],
-        },
+       
         {
           name: "RIYA SEHGAL",
-          role: "Event Management Member",
+          role: "Marketing Team",
           image: "/team/riya-sehgal.jpg",
           bio: "Event coordination and logistics",
           socials: [
@@ -1402,7 +1405,7 @@ export default function TeamSection({
       scale: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   };

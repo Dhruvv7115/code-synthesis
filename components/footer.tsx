@@ -213,7 +213,7 @@ export default function Footer({ isDarkMode, scrollToSection }: FooterProps) {
                     <Phone className="w-4 h-4 text-green-400" />
                   </Link>
                 </div>
-                <span className="text-sm">+91 1234567890</span>
+                <span className="text-sm">+91 8448047279</span>
               </div>
               <div
                 className={`flex items-center space-x-3 ${
@@ -244,7 +244,7 @@ export default function Footer({ isDarkMode, scrollToSection }: FooterProps) {
               isDarkMode ? "text-gray-500" : "text-gray-500"
             } text-sm`}
           >
-            © 2025 CodeZen. All rights reserved.
+            © 2025 Code Synthesis. All rights reserved.
           </p>
           <div className="flex flex-col items-center mt-2 text-sm">
             <span>
