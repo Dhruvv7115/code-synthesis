@@ -506,26 +506,26 @@ export default function TeamSection({
             },
           ],
         },
-        {
-          name: "VRITTI GARG",
-          role: "UI/UX Lead",
-          image: "/team/vritti-garg.jpg",
-          bio: "Data Structures and Algorithms specialist",
-          socials: [
-            {
-              platform: "linkedin",
-              url: "https://www.linkedin.com/in/vritti-garg-87a197298",
-            },
-            {
-              platform: "instagram",
-              url: "https://www.instagram.com/vritti1512",
-            },
-            {
-              platform: "github",
-              url: "https://github.com/Vritti1215",
-            },
-          ],
-        },
+        // {
+        //   name: "VRITTI GARG",
+        //   role: "UI/UX Lead",
+        //   image: "/team/vritti-garg.jpg",
+        //   bio: "Data Structures and Algorithms specialist",
+        //   socials: [
+        //     {
+        //       platform: "linkedin",
+        //       url: "https://www.linkedin.com/in/vritti-garg-87a197298",
+        //     },
+        //     {
+        //       platform: "instagram",
+        //       url: "https://www.instagram.com/vritti1512",
+        //     },
+        //     {
+        //       platform: "github",
+        //       url: "https://github.com/Vritti1215",
+        //     },
+          // ],
+        // },
         {
           name: "HARSH YADAV",
           role: "UI/UX Co-Lead",
@@ -1298,7 +1298,7 @@ export default function TeamSection({
         },
         {
           name: "RIDHIMA MITTALL",
-          role: "Event Management Co-Lead",
+          role: "Event Management Member",
           image: "/team/RidhimaMittal.jpg",
           bio: "Managing venue arrangements and coordination",
           socials: [
