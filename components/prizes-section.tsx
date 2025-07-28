@@ -64,7 +64,7 @@ export default function PrizesSection({
             </div>
             <h3 className="text-2xl font-black mb-2">WINNER</h3>
             <div className="text-3xl font-black text-yellow-400 mb-3">
-              ₹1,00,000
+              ₹10,000
             </div>
             <div
               className={`space-y-1 ${
@@ -95,7 +95,7 @@ export default function PrizesSection({
               </div>
               <h3 className="text-xl font-black mb-2">FIRST RUNNER UP</h3>
               <div className="text-3xl font-black text-gray-300 mb-3">
-                ₹80,000
+                ₹7,000
               </div>
               <div
                 className={`space-y-1 ${
@@ -128,7 +128,7 @@ export default function PrizesSection({
               </div>
               <h3 className="text-xl font-black mb-2">SECOND RUNNER UP</h3>
               <div className="text-3xl font-black text-orange-300 mb-3">
-                ₹50,000
+                ₹5,000
               </div>
               <div
                 className={`space-y-1 ${
@@ -160,9 +160,7 @@ export default function PrizesSection({
               <Users2 className="w-8 h-8 text-black" />
             </div>
             <h3 className="text-lg font-black mb-2">ALL GIRLS TEAM</h3>
-            <div className="text-2xl font-black text-pink-400 mb-3">
-              ₹35,000
-            </div>
+            <div className="text-2xl font-black text-pink-400 mb-3">₹5,000</div>
             <div
               className={`space-y-1 ${
                 isDarkMode ? "text-gray-300" : "text-gray-700"
@@ -191,9 +189,7 @@ export default function PrizesSection({
               <GraduationCap className="w-8 h-8 text-black" />
             </div>
             <h3 className="text-lg font-black mb-2">ALL FRESHERS TEAM</h3>
-            <div className="text-2xl font-black text-blue-400 mb-3">
-              ₹35,000
-            </div>
+            <div className="text-2xl font-black text-blue-400 mb-3">₹5,000</div>
             <div
               className={`space-y-1 ${
                 isDarkMode ? "text-gray-300" : "text-gray-700"

@@ -10,7 +10,7 @@ describe("HeroSection", () => {
   it("renders main title correctly", () => {
     render(<HeroSection {...mockProps} />);
 
-    expect(screen.getByText("CODEZEN")).toBeInTheDocument();
+    expect(screen.getByText("code synthesis")).toBeInTheDocument();
     expect(screen.getByText("2025")).toBeInTheDocument();
   });
 
@@ -18,7 +18,7 @@ describe("HeroSection", () => {
     render(<HeroSection {...mockProps} />);
 
     expect(screen.getByText("Sep 27, 2025")).toBeInTheDocument();
-    expect(screen.getByText("24 Hours")).toBeInTheDocument();
+    expect(screen.getByText("8 Hours")).toBeInTheDocument();
     expect(screen.getByText("Delhi, India")).toBeInTheDocument();
   });
 
@@ -27,7 +27,7 @@ describe("HeroSection", () => {
 
     expect(screen.getByText("5000+")).toBeInTheDocument();
     expect(screen.getByText("PARTICIPANTS")).toBeInTheDocument();
-    expect(screen.getByText("₹1,00,000+")).toBeInTheDocument();
+    expect(screen.getByText("₹3,00,000+")).toBeInTheDocument();
     expect(screen.getByText("IN PRIZES")).toBeInTheDocument();
     expect(screen.getByText("JOIN")).toBeInTheDocument();
     expect(screen.getByText("DISCORD")).toBeInTheDocument();
@@ -43,6 +43,6 @@ describe("HeroSection", () => {
   it("renders subtitle correctly", () => {
     render(<HeroSection {...mockProps} />);
 
-    expect(screen.getByText("36-HOUR HACKATHON")).toBeInTheDocument();
+    expect(screen.getByText("8-HOUR HACKATHON")).toBeInTheDocument();
   });
 });

@@ -2,19 +2,13 @@ import type { Metadata } from "next";
 import Head from "next/head";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
+import { LenisProvider } from "@/components/lenis-provider";
 
 export const metadata: Metadata = {
   title: "Code Synthesis Hackathon",
   description:
     "Join the Code Synthesis Hackathon focused on building sustainable software solutions. Collaborate, innovate, and create impactful projects for a greener future.",
-  keywords: [
-    "hackathon",
-    "code synthesis",
-    "sustainability",
-    "software",
-    "innovation",
-    "green tech",
-  ],
+  keywords: ["software", "innovation", "green tech"],
   authors: [{ name: "Code Synthesis Hackathon Team" }],
   openGraph: {
     title: "Code Synthesis Hackathon",
@@ -55,7 +49,7 @@ export default function RootLayout({
         <title>Code Synthesis Hackathon</title>
       </Head>
       <body>
-        {children}
+        <LenisProvider>{children}</LenisProvider>
         <Analytics />
       </body>
     </html>

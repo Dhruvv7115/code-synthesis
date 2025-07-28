@@ -250,7 +250,7 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
             >
-              9-HOUR HACKATHON
+              BUILD. INNOVATE. WIN.
             </motion.h2>
             <motion.div
               className="h-px bg-gradient-to-r from-transparent via-emerald-400 to-transparent flex-1 max-w-32"
@@ -280,8 +280,8 @@ export default function HeroSection({ isDarkMode }: HeroSectionProps) {
           className="flex flex-wrap justify-center items-center gap-6 mb-16"
         >
           {[
-            { icon: Calendar, text: "Sep 27, 2025", color: "emerald" },
-            { icon: Clock, text: "9 Hours", color: "cyan" },
+            { icon: Calendar, text: "13-27 Sep, 2025", color: "emerald" },
+            { icon: Clock, text: "Hybrid Event", color: "cyan" },
             { icon: MapPin, text: "Delhi, India", color: "green" },
           ].map((item, index) => (
             <motion.div
