@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sparkles, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 interface NavigationProps {
   isDarkMode: boolean;
@@ -163,25 +164,29 @@ export default function Navigation({
       >
         <div className="flex flex-col space-y-4 p-6">
           {navItems.map((item, index) => (
-            <motion.button
+            <Link
               key={item.id}
-              initial={{ x: -50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: index * 0.1 }}
+              href={`#${item.id}`}
               onClick={() => {
                 scrollToSection(item.id);
                 setIsMenuOpen(false);
               }}
-              className={`${
-                isScrolled
-                  ? "text-white hover:text-green-300"
-                  : isDarkMode
-                  ? "text-gray-300 hover:text-green-400"
-                  : "text-gray-700 hover:text-green-600"
-              } transition-colors font-bold tracking-wide text-left transform hover:translate-x-2 duration-300`}
             >
-              {item.label}
-            </motion.button>
+              <motion.button
+                initial={{ x: -50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: index * 0.1 }}
+                className={`${
+                  isScrolled
+                    ? "text-white hover:text-green-300"
+                    : isDarkMode
+                    ? "text-gray-300 hover:text-green-400"
+                    : "text-gray-700 hover:text-green-600"
+                } transition-colors font-bold tracking-wide text-left transform hover:translate-x-2 duration-300`}
+              >
+                {item.label}
+              </motion.button>
+            </Link>
           ))}
 
           {/* Mobile Register Button */}
